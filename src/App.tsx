@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <Header />
       <div className="cards-template">
-        <WebCard />
+        <WebCard/>
       </div>
     </div>
   );
