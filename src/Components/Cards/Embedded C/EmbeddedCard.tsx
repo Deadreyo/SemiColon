@@ -1,29 +1,32 @@
+import React from 'react'
 import '../Card.css'
-import WebImage from '../../../assets/Web.jpg'
+import EmbeddedImage from '../../../assets/Embedded C.png'
 import { Link } from 'react-router-dom'
 function Card() {
   return (
     <article className="card">
       <img
         className="card__background"
-        src={WebImage}
+        src={EmbeddedImage}
         alt="Photo of Cartagena's cathedral at the background and some colonial style houses"
         width="1920"
         height="2193"
       />
       <div className="card__content | flow">
         <div className="card__content--container | flow">
-          <h2 className="card__title">Web Dev.</h2>
+          <h2 className="card__title">Embedded C</h2>
           <p className="card__description">
-            Web development is an exciting field that can lead to many
-            opportunities. Learning web development can help you create
-            beautiful and interactive websites that can be accessed by millions
-            of people around the world. It can also help you develop skills that
-            are in high demand in today's job market. Come Join our Community
+            Embedded C programming is not just about creating embedded systems,
+            it's also about creating software that interacts with hardware.
+            Learning Embedded C programming can help you develop skills in
+            programming languages like C which are essential for creating
+            embedded systems.
           </p>
         </div>
         <button className="card__button">
-          <Link className='btn-title' to="/form">Join Us</Link>
+          <Link className="btn-title" to="/form">
+            Join Us
+          </Link>
         </button>
       </div>
     </article>
