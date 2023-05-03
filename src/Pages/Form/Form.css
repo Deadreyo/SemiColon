@@ -100,7 +100,8 @@ input[type=number] {
   resize: none
 }
 .text-area {
-   height: 300px;
+  margin-bottom: 50px;
+   height: 150px;
 }
 
 .cut {
@@ -117,7 +118,7 @@ input[type=number] {
 }
 
 .cut-short {
-  width: 120px;
+  width: 250px;
   
 }
 
