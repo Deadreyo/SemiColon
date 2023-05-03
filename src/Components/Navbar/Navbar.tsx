@@ -3,7 +3,6 @@ import './Navbar.css'
 import logo from "../../assets/Logo.png"
 import { Icon } from "@iconify/react";
 import { Link } from 'react-router-dom'
-
 function Navbar() {
   const [btn,setBtn] = useState(false)
   const handleClick = () => {
@@ -41,9 +40,7 @@ function Navbar() {
         />
       </nav>
     </div>
-
   )
-
 }
 
 <img src={logo} alt="Logo" className="logo-pic" />;
