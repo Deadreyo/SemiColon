@@ -18,16 +18,19 @@ function Form() {
   const [errorMessage, setErrorMessage] = useState('')
   const [loading,setLoading] = useState(false)
   const [thankMessage,setThankMessage] = useState(false)
+
   const handleChange = (
     event:
       | React.ChangeEvent<HTMLInputElement>
       | React.ChangeEvent<HTMLSelectElement>
       | React.ChangeEvent<HTMLTextAreaElement>
   ) => {
+
     const { id, value } = event.target
     setData({
       ...data,
       [id]: value,
+
     })
   }
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
