@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import './Navbar.css'
 import logo from "../../assets/Logo.png"
 import { Icon } from "@iconify/react";
+import { Link } from 'react-router-dom'
+
 function Navbar() {
   const [btn,setBtn] = useState(false)
   const handleClick = () => {
@@ -12,9 +14,9 @@ function Navbar() {
   return (
     <div>
       <nav className="navbar">
-        <a href="" className="logo">
+        <Link to="/" className="logo">
           <img src={logo} alt="Logo" className="logo-pic" />
-        </a>
+        </Link>
         <div className={`nav-links ${toggleClassCheck}`}>
           <ul className="nav-menu">
             <li className="active">
@@ -39,7 +41,9 @@ function Navbar() {
         />
       </nav>
     </div>
-  );
+
+  )
+
 }
 
 <img src={logo} alt="Logo" className="logo-pic" />;
