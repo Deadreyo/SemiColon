@@ -232,7 +232,9 @@ function Form() {
               <div className="error-mess">{errorMessage}</div>
             </>
           )}
+
           {thankMessage && <ThankYou />}
+
         </form>
       </div>
     </>
