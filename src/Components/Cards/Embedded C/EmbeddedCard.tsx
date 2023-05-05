@@ -1,4 +1,3 @@
-import React from 'react'
 import '../Card.css'
 import EmbeddedImage from '../../../assets/Embedded C.png'
 import { Link } from 'react-router-dom'
