@@ -3,27 +3,56 @@ import Header from '../../Components/Header/Header'
 import './Form.css'
 import Loading from '../../Components/Loading/Loading'
 import ThankYou from '../../Components/ThankYou/ThankYou'
+import Divider from '@mui/material/Divider'
+import Chip from '@mui/material/Chip'
 
 const formData = {
-  name:'',
+  name: '',
   email: '',
-  phoneNumber: '',
-  collegeID: '',
+  phone: '',
+  collegeId: '',
   year: '',
-  firstPref: '',
-  prevExperienceInFirstPref: '',
-  whyInterestedInFirstPref: '',
-  secondPref: '',
-  prevExperienceInSecondPref: '',
-  whyInterestedInSecondPref: '',
-  studentActivityExperience: '',
+  firstPreference: '',
+  firstPrefKnowledge: '',
+  firstPrefReason: '',
+  secondPreference: '',
+  secondPrefReason: '',
+  pastExperience: '',
 }
+
+const allOption2 = [
+  {
+    name: 'Second Preference',
+    value: 'no track',
+  },
+  {
+    name: 'Web Dev.',
+    value: 'webDev1',
+  },
+  {
+    name: 'Embedded C',
+    value: 'webDev2',
+  },
+  {
+    name: 'AVR',
+    value: 'webDev3',
+  },
+]
 
 function Form() {
   const [data, setData] = useState(formData)
   const [errorMessage, setErrorMessage] = useState('')
-  const [loading,setLoading] = useState(false)
-  const [thankMessage,setThankMessage] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [thankMessage, setThankMessage] = useState(false)
+  const [select1, setSelect1] = useState('No-track')
+  const filterOption2 = allOption2.filter((i) => {
+    return (
+      (select1 === 'webDev1' && i.value !== 'webDev1') ||
+      (select1 === 'webDev2' && i.value !== 'webDev2') ||
+      (select1 === 'webDev3' && i.value !== 'webDev3') ||
+      select1 === 'No-track'
+    )
+  })
   const handleChange = (
     event:
       | React.ChangeEvent<HTMLInputElement>
@@ -36,35 +65,77 @@ function Form() {
       [id]: value,
     })
   }
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleChangeSecondSelect = (
+    event:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLSelectElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
+  ) => {
+    const { id, value } = event.target
+    setData({
+      ...data,
+      [id]: value,
+    })
+    setSelect1(event.target.value)
+  }
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    if (
-      data.name === '' ||
-      data.email === '' ||
-      data.phoneNumber === '' ||
-      data.collegeID === '' ||
-      data.year === '' ||
-      data.year === 'No-year' ||
-      data.firstPref === '' ||
-      data.firstPref === 'No-track' ||
-      data.prevExperienceInFirstPref === '' ||
-      data.whyInterestedInFirstPref === '' ||
-      data.secondPref === '' ||
-      data.secondPref === 'No-track' ||
-      data.prevExperienceInSecondPref === '' ||
-      data.whyInterestedInSecondPref === '' ||
-      data.studentActivityExperience === ''
-    ) {
+    const phoneRegEx = /^01\d{9}$/
+    const emailRegEx = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+    const collegeIdRegEx = /^[0-9]{2}[a-zA-Z0-9][0-9]{4}$/
+    if (!phoneRegEx.test(data.phone)) {
+      alert('Phone Number is invalid')
       console.log('error')
-      setErrorMessage('Please fill all inputs')
       setLoading(false)
       setThankMessage(false)
-      console.log(data)
+    } else if (!emailRegEx.test(data.email)) {
+      alert('Email is invalid')
+      console.log('error')
+      setLoading(false)
+      setThankMessage(false)
+    } else if (!collegeIdRegEx.test(data.collegeId)) {
+      alert('College ID  is invalid')
+      console.log('error')
+      setLoading(false)
+      setThankMessage(false)
+    } else if (
+      data.year === '' ||
+      data.year === 'No-year' ||
+      data.firstPreference === '' ||
+      data.secondPreference === 'No-track' ||
+      data.firstPrefKnowledge === '' ||
+      data.firstPrefReason === '' ||
+      data.secondPreference === '' ||
+      data.secondPreference === 'no track' ||
+      data.secondPrefReason === '' ||
+      data.pastExperience === ''
+    ) {
+      alert('Please fill all inputs')
+      setErrorMessage('Please fill all inputs')
+      console.log('error')
+      setLoading(false)
+      setThankMessage(false)
     } else {
       console.log(data)
       setErrorMessage('')
+      setTimeout(()=>{
+        setThankMessage(true)
+      },3000)
       setLoading(true)
-      setThankMessage(true)
+      let resData
+      try {
+        const res = await fetch('http://localhost:9100/participants/add', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ participant: data }),
+        })
+        resData = await res.json()
+      } catch (err: any) {
+        console.log(resData)
+        alert('Something Went Wrong')
+      }
     }
   }
 
@@ -80,7 +151,12 @@ function Form() {
             <Loading />
           ) : (
             <>
-              <div className="input-container ic1">
+              <Divider>
+                <Chip label="Persnal Info" color="warning" />
+              </Divider>
+              <br />
+              <hr className="solid"></hr>
+              <div className="input-container ic2">
                 <input
                   id="name"
                   className="input"
@@ -108,10 +184,9 @@ function Form() {
               </div>
               <div className="input-container ic2">
                 <input
-                  id="phoneNumber"
+                  id="phone"
                   className="input"
                   placeholder=" "
-                  type="number"
                   onChange={handleChange}
                 />
                 <div className="cut cut-short"></div>
@@ -119,10 +194,9 @@ function Form() {
               </div>
               <div className="input-container ic2">
                 <input
-                  id="collegeID"
+                  id="collegeId"
                   className="input"
                   placeholder=" "
-                  type="number"
                   onChange={handleChange}
                 />
                 <div className="cut cut-short"></div>
@@ -140,23 +214,31 @@ function Form() {
                   </select>
                 </div>
               </div>
+              <br />
+              <hr className="solid"></hr>
+              <br />
+              <Divider>
+                <Chip label="First & Second Preferences" color="warning" />
+              </Divider>
+              <br />
+              <hr className="solid"></hr>
               <div className="drop-down">
                 <div className="select">
                   <select
                     className="options"
-                    id="firstPref"
-                    onChange={handleChange}
+                    id="firstPreference"
+                    onChange={handleChangeSecondSelect}
                   >
                     <option value="No-track">First Preference</option>
-                    <option value="Web">Web Dev.</option>
-                    <option value="Embedded C">Embedded C</option>
-                    <option value="AVR">AVR</option>
+                    <option value="webDev1">Web Dev.</option>
+                    <option value="webDev2">Embedded C</option>
+                    <option value="webDev3">AVR</option>
                   </select>
                 </div>
               </div>
               <div className="input-container ic2 text-area">
                 <textarea
-                  id="prevExperienceInFirstPref"
+                  id="firstPrefKnowledge"
                   className="input"
                   placeholder=" "
                   onChange={handleChange}
@@ -168,7 +250,7 @@ function Form() {
               </div>
               <div className="input-container ic2 text-area">
                 <textarea
-                  id="whyInterestedInFirstPref"
+                  id="firstPrefReason"
                   className="input"
                   placeholder=" "
                   onChange={handleChange}
@@ -181,30 +263,19 @@ function Form() {
               <div className="select">
                 <select
                   className="options"
-                  id="secondPref"
+                  id="secondPreference"
                   onChange={handleChange}
                 >
-                  <option value="No-track">Second Preference</option>
-                  <option value="Web">Web Dev.</option>
-                  <option value="Embedded C">Embedded C</option>
-                  <option value="AVR">AVR</option>
+                  {filterOption2.map((op) => (
+                    <option key={select1 + op.value} value={op.value}>
+                      {op.name}
+                    </option>
+                  ))}
                 </select>
               </div>
               <div className="input-container ic2 text-area">
                 <textarea
-                  id="prevExperienceInSecondPref"
-                  className="input"
-                  placeholder=" "
-                  onChange={handleChange}
-                />
-                <div className="cut cut-short"></div>
-                <label className="placeholder">
-                  Previous Experience in 2nd track
-                </label>
-              </div>
-              <div className="input-container ic2 text-area">
-                <textarea
-                  id="whyInterestedInSecondPref"
+                  id="secondPrefReason"
                   className="input"
                   placeholder=" "
                   onChange={handleChange}
@@ -214,9 +285,16 @@ function Form() {
                   Why interested in 2nd track
                 </label>
               </div>
+              <hr className="solid"></hr>
+              <br />
+              <Divider>
+                <Chip label="Previous Experience" color="warning" />
+              </Divider>
+              <br />
+              <hr className="solid"></hr>
               <div className="input-container ic2 text-area">
                 <textarea
-                  id="studentActivityExperience"
+                  id="pastExperience"
                   className="input"
                   placeholder=" "
                   onChange={handleChange}
@@ -226,6 +304,7 @@ function Form() {
                   Previous Student activity experience
                 </label>
               </div>
+              <hr className="solid"></hr>
               <button type="submit" className="submit">
                 Submit
               </button>
