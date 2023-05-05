@@ -1,3 +1,4 @@
+
 import React from 'react'
 import '../Card.css'
 import EmbeddedImage from '../../../assets/Embedded C.png'
@@ -23,6 +24,7 @@ function Card() {
             embedded systems.
           </p>
         </div>
+
         <Link className="btn-title" to="/form">
           <button className="card__button">Join Us</button>
         </Link>

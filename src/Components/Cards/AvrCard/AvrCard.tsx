@@ -1,4 +1,6 @@
+
 import React from 'react'
+
 import '../Card.css'
 import AvrImage from '../../../assets/avr-icon-480x280.jpg'
 import { Link , } from 'react-router-dom'
@@ -23,6 +25,7 @@ function Card() {
             market.
           </p>
         </div>
+
         <Link className="btn-title" to="/form">
           <button className="card__button">Join Us</button>
         </Link>
