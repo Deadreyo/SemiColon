@@ -13,7 +13,9 @@ const router = createBrowserRouter([
     path: '/form',
     element: <Form />,
   },
-])
+], {
+  basename: '/SemiColon-registration-frontend'
+})
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
