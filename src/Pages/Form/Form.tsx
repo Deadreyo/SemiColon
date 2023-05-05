@@ -238,6 +238,7 @@ function Form() {
               </div>
               <div className="input-container ic2 text-area">
                 <textarea
+
                   id="firstPrefKnowledge"
                   className="input"
                   placeholder=" "
@@ -311,6 +312,7 @@ function Form() {
               <div className="error-mess">{errorMessage}</div>
             </>
           )}
+
           {thankMessage && <ThankYou />}
         </form>
       </div>

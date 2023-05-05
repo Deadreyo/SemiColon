@@ -22,6 +22,7 @@ function Card() {
             embedded systems.
           </p>
         </div>
+
         <Link className="btn-title" to="/form">
           <button className="card__button">Join Us</button>
         </Link>
