@@ -22,9 +22,10 @@ function Card() {
             are in high demand in today's job market. Come Join our Community
           </p>
         </div>
-        <button className="card__button">
-          <Link className='btn-title' to="/form">Join Us</Link>
-        </button>
+
+        <Link className="btn-title" to="/form">
+          <button className="card__button">Join Us</button>
+        </Link>
       </div>
     </article>
   )

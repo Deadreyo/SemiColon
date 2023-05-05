@@ -19,6 +19,8 @@
   font-weight: 600;
   margin-top: 15px;
   width: 50%;
+
+  margin-bottom: 10px;
 }
 #top-form {
    display: flex;
@@ -57,7 +59,7 @@
 }
 
 .ic2 {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .input {
@@ -99,7 +101,7 @@ input[type=number] {
   resize: none
 }
 .text-area {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
    height: 150px;
 }
 
@@ -118,7 +120,6 @@ input[type=number] {
 
 .cut-short {
   width: 250px;
-
   
 }
 

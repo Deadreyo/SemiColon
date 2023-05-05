@@ -1,11 +1,10 @@
-import { Link } from 'react-router-dom'
 function ThankYou() {
   return (
     <div>
       <button className="submit">
-        <Link className="btn-title" to="/">
+        <a className="btn-title" href="/">
           Thank You For Registration
-        </Link>
+        </a>
       </button>
     </div>
   )
