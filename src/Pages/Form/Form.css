@@ -177,7 +177,9 @@ input[type=number] {
   justify-content: center;
   align-items: center;
 }
-
+.chip {
+  width: 200px;
+}
 @media only screen and (max-width: 900px) {
    .form {
   width: 97%;

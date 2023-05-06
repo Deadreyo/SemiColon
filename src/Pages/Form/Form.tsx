@@ -23,22 +23,49 @@ const formData = {
 const allOption2 = [
   {
     name: 'Second Preference',
-    value: 'no track',
+    value: 'No-track',
   },
   {
-    name: 'Web Dev.',
-    value: 'webDev1',
+    name: 'FrontEnd',
+    value: 'frontend',
   },
   {
-    name: 'Embedded C',
-    value: 'webDev2',
+    name: 'C Programming',
+    value: 'c-prog',
   },
   {
-    name: 'AVR',
-    value: 'webDev3',
+    name: 'React',
+    value: 'react',
+  },
+  {
+    name: 'FullStack',
+    value: 'fullstack',
+  },
+  {
+    name: 'Nodejs',
+    value: 'nodejs',
+  },
+  {
+    name: 'Python',
+    value: 'python',
+  },
+  {
+    name: 'Avr',
+    value: 'avr',
+  },
+  {
+    name: 'Arm',
+    value: 'arm',
+  },
+  {
+    name: 'Flutter',
+    value: 'flutter',
+  },
+  {
+    name: 'Digital',
+    value: 'digital',
   },
 ]
-
 function Form() {
   const [data, setData] = useState(formData)
   const [errorMessage, setErrorMessage] = useState('')
@@ -47,9 +74,16 @@ function Form() {
   const [select1, setSelect1] = useState('No-track')
   const filterOption2 = allOption2.filter((i) => {
     return (
-      (select1 === 'webDev1' && i.value !== 'webDev1') ||
-      (select1 === 'webDev2' && i.value !== 'webDev2') ||
-      (select1 === 'webDev3' && i.value !== 'webDev3') ||
+      (select1 === 'frontend' && i.value !== 'frontend') ||
+      (select1 === 'c-prog' && i.value !== 'c-prog') ||
+      (select1 === 'react' && i.value !== 'react') ||
+      (select1 === 'fullstack' && i.value !== 'fullstack') ||
+      (select1 === 'nodejs' && i.value !== 'nodejs') ||
+      (select1 === 'python' && i.value !== 'python') ||
+      (select1 === 'avr' && i.value !== 'avr') ||
+      (select1 === 'arm' && i.value !== 'arm') ||
+      (select1 === 'flutter' && i.value !== 'flutter') ||
+      (select1 === 'digital' && i.value !== 'digital') ||
       select1 === 'No-track'
     )
   })
@@ -152,7 +186,12 @@ function Form() {
           ) : (
             <>
               <Divider>
-                <Chip label="Persnal Info" color="warning" />
+                <Chip
+                  size="medium"
+                  className="chip"
+                  label="Personal Info"
+                  color="warning"
+                />
               </Divider>
               <br />
               <hr className="solid"></hr>
@@ -230,15 +269,21 @@ function Form() {
                     onChange={handleChangeSecondSelect}
                   >
                     <option value="No-track">First Preference</option>
-                    <option value="webDev1">Web Dev.</option>
-                    <option value="webDev2">Embedded C</option>
-                    <option value="webDev3">AVR</option>
+                    <option value="frontend">FrontEnd</option>
+                    <option value="c-prog">C Programming</option>
+                    <option value="react">React</option>
+                    <option value="fullstack">FullStack</option>
+                    <option value="nodejs">Nodejs</option>
+                    <option value="python ">Python</option>
+                    <option value="avr">Avr</option>
+                    <option value="arm">Arm</option>
+                    <option value="flutter ">Flutter</option>
+                    <option value="digital ">Digital</option>
                   </select>
                 </div>
               </div>
               <div className="input-container ic2 text-area">
                 <textarea
-
                   id="firstPrefKnowledge"
                   className="input"
                   placeholder=" "
