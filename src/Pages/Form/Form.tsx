@@ -5,6 +5,7 @@ import Loading from '../../Components/Loading/Loading'
 import ThankYou from '../../Components/ThankYou/ThankYou'
 import Divider from '@mui/material/Divider'
 import Chip from '@mui/material/Chip'
+import SubmitError from '../../Components/SubmitError/SubmitError'
 
 const formData = {
   name: '',
@@ -71,6 +72,7 @@ function Form() {
   const [errorMessage, setErrorMessage] = useState('')
   const [loading, setLoading] = useState(false)
   const [thankMessage, setThankMessage] = useState(false)
+  const [submitErrorMessage, setSubmitErrorMessage] = useState(false)
   const [select1, setSelect1] = useState('No-track')
   const filterOption2 = allOption2.filter((i) => {
     return (
@@ -152,9 +154,6 @@ function Form() {
     } else {
       console.log(data)
       setErrorMessage('')
-      setTimeout(()=>{
-        setThankMessage(true)
-      },3000)
       setLoading(true)
       let resData
       try {
@@ -166,9 +165,16 @@ function Form() {
           body: JSON.stringify({ participant: data }),
         })
         resData = await res.json()
+        setTimeout(() => {
+          setThankMessage(true)
+        }, 2000)
+        setLoading(true)
       } catch (err: any) {
         console.log(resData)
-        alert('Something Went Wrong')
+        setTimeout(() => {
+          setSubmitErrorMessage(true)
+        }, 1000)
+        setThankMessage(false)
       }
     }
   }
@@ -360,6 +366,9 @@ function Form() {
 
           {thankMessage && <ThankYou />}
         </form>
+        <div className="err-btn-container">
+          {submitErrorMessage && <SubmitError />}
+        </div>
       </div>
     </>
   )

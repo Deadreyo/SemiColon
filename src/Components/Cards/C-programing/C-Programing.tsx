@@ -13,7 +13,7 @@ function Card() {
       />
       <div className="card__content | flow">
         <div className="card__content--container | flow">
-          <h2 className="card__title">Embedded C</h2>
+          <h2 className="card__title">C-Programming</h2>
           <p className="card__description">
             Embedded C programming is not just about creating embedded systems,
             it's also about creating software that interacts with hardware.
