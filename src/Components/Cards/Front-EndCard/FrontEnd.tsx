@@ -13,7 +13,7 @@ function Card() {
       />
       <div className="card__content | flow">
         <div className="card__content--container | flow">
-          <h2 className="card__title">Web Dev.</h2>
+          <h2 className="card__title">Front-End</h2>
           <p className="card__description">
             Web development is an exciting field that can lead to many
             opportunities. Learning web development can help you create
