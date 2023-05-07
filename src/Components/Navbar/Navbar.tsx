@@ -19,16 +19,16 @@ function Navbar() {
         <div className={`nav-links ${toggleClassCheck}`}>
           <ul className="nav-menu">
             <li className="active">
-              <a href="">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="">About Us</a>
+              <a href="https://www.facebook.com/elite.team.asu" target="_blank">About Us</a>
             </li>
             <li>
-              <a href="">Join Us</a>
+              <a href="https://www.facebook.com/elite.team.asu" target="_blank">Join Us</a>
             </li>
             <li>
-              <a href="">Contact</a>
+              <a href="https://www.facebook.com/elite.team.asu" target="_blank">Contact</a>
             </li>
           </ul>
         </div>
