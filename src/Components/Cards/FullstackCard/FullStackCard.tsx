@@ -1,6 +1,5 @@
 import '../Card.css'
 import FullStackImage from '../../../assets/fullStack.png'
-import { Link , } from 'react-router-dom'
 
 function Card() {
   return (
@@ -23,9 +22,9 @@ function Card() {
           </p>
         </div>
 
-        <Link className="btn-title" to="/form">
-          <button className="card__button">Join Us</button>
-        </Link>
+        <a className="btn-title" href="#fullStack">
+          <button className="card__button">Read more</button>
+        </a>
       </div>
     </article>
   )

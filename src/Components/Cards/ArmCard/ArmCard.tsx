@@ -1,6 +1,5 @@
 import '../Card.css'
 import ArmImage from '../../../assets/68057e80-67ee-11eb-8ec5-650ca1fde4e8.jfif'
-import { Link , } from 'react-router-dom'
 
 function Card() {
   return (
@@ -23,9 +22,9 @@ function Card() {
           </p>
         </div>
 
-        <Link className="btn-title" to="/form">
-          <button className="card__button">Join Us</button>
-        </Link>
+        <a className="btn-title" href="#arm">
+          <button className="card__button">Read more</button>
+        </a>
       </div>
     </article>
   )

@@ -1,6 +1,5 @@
 import '../Card.css'
 import WebImage from '../../../assets/Web.jpg'
-import { Link } from 'react-router-dom'
 function Card() {
   return (
     <article className="card">
@@ -23,9 +22,9 @@ function Card() {
           </p>
         </div>
 
-        <Link className="btn-title" to="/form">
-          <button className="card__button">Join Us</button>
-        </Link>
+        <a className="btn-title" href="#frontEnd">
+          <button className="card__button">Read more</button>
+        </a>
       </div>
     </article>
   )
