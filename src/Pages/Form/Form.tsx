@@ -121,6 +121,7 @@ function Form() {
   }
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
+    data.name.trim();
     const phoneRegEx = /^01\d{9}$/
     const emailRegEx = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
     const collegeIdRegEx = /^[0-9]{2}[a-zA-Z0-9][0-9]{4}$/
@@ -147,11 +148,11 @@ function Form() {
       data.firstPreference === '' ||
       data.secondPreference === 'No-track' ||
       data.firstPrefKnowledge === '' ||
-      data.firstPrefReason === '' ||
+    //   data.firstPrefReason === '' ||
       data.secondPreference === '' ||
-      data.secondPreference === 'no track' ||
-      data.secondPrefReason === '' ||
-      data.pastExperience === ''
+      data.secondPreference === 'no track'
+    //   data.secondPrefReason === '' ||
+    //   data.pastExperience === ''
     ) {
       alert('Please fill all inputs')
       setErrorMessage('Please fill all inputs')
@@ -222,10 +223,11 @@ function Form() {
                   type="text"
                   placeholder=" "
                   onChange={handleChange}
+                  required
                 />
-                <div className="cut"></div>
+                <div className="cut cut-short"></div>
                 <label htmlFor="first-name" className="placeholder">
-                  Name
+                  Name (In English)
                 </label>
               </div>
               <div className="input-container ic2">
@@ -235,6 +237,7 @@ function Form() {
                   type="email"
                   placeholder=" "
                   onChange={handleChange}
+                  required
                 />
                 <div className="cut cut-short"></div>
                 <label htmlFor="email" className="placeholder">
@@ -247,9 +250,10 @@ function Form() {
                   className="input"
                   placeholder=" "
                   onChange={handleChange}
+                  required
                 />
                 <div className="cut cut-short"></div>
-                <label className="placeholder">Phone Number.</label>
+                <label className="placeholder">Phone Number</label>
               </div>
               <div className="input-container ic2">
                 <input
@@ -257,6 +261,7 @@ function Form() {
                   className="input"
                   placeholder=" "
                   onChange={handleChange}
+                  required
                 />
                 <div className="cut cut-short"></div>
                 <label className="placeholder">College ID</label>
@@ -314,6 +319,7 @@ function Form() {
                   className="input"
                   placeholder=" "
                   onChange={handleChange}
+                  required
                 />
                 <div className="cut cut-short"></div>
                 <label className="placeholder">
