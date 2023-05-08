@@ -197,6 +197,7 @@ function Form() {
                   className="chip"
                   label="Personal Info"
                   color="warning"
+                  style={{ fontSize: '1.1rem' }}
                 />
               </Divider>
               <br />
@@ -263,7 +264,12 @@ function Form() {
               <hr className="solid"></hr>
               <br />
               <Divider>
-                <Chip label="First & Second Preferences" color="warning" />
+                <Chip 
+                  label="First & Second Preferences" 
+                  color="warning"
+                  style={{ fontSize: '1.1rem', padding: '10px' }} 
+                  size='medium' 
+                />
               </Divider>
               <br />
               <hr className="solid"></hr>
@@ -340,7 +346,11 @@ function Form() {
               <hr className="solid"></hr>
               <br />
               <Divider>
-                <Chip label="Previous Experience" color="warning" />
+                <Chip 
+                  label="Previous Experience" 
+                  color="warning"
+                  style={{ fontSize: '1.1rem', padding: '10px' }} 
+                />
               </Divider>
               <br />
               <hr className="solid"></hr>
