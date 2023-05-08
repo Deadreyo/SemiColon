@@ -4,24 +4,24 @@ import App from './App.tsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Form from './Pages/Form/Form.tsx'
+import SmoothScroll from './Components/SmoothScroll/SmoothScroll.tsx'
 
 
 
-const router = createBrowserRouter(
-  [
-    {
-      path: '/',
-      element: (
-          <App />
-      ),
-    },
-    {
-      path: '/form',
-      element: 
-      <Form />
-    },
-  ]
-)
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <App />,
+  },
+  {
+    path: '/form',
+    element: (
+      <SmoothScroll>
+        <Form />
+      </SmoothScroll>
+    ),
+  },
+])
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
