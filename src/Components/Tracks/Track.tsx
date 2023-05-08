@@ -25,10 +25,10 @@ function Track({
             <div className="faq-drawer">
               <input
                 className="faq-drawer__trigger"
-                id="faq-drawer"
+                id={'faq-drawer' + id}
                 type="checkbox"
               />
-              <label className="faq-drawer__title" htmlFor="faq-drawer">
+              <label className="faq-drawer__title" htmlFor={'faq-drawer' + id}>
                 Objectives
               </label>
               <div className="faq-drawer__content-wrapper">
@@ -43,10 +43,13 @@ function Track({
             <div className="faq-drawer">
               <input
                 className="faq-drawer__trigger"
-                id="faq-drawer-2"
+                id={'faq-drawer-2' + id}
                 type="checkbox"
               />
-              <label className="faq-drawer__title" htmlFor="faq-drawer-2">
+              <label
+                className="faq-drawer__title"
+                htmlFor={'faq-drawer-2' + id}
+              >
                 Requirements
               </label>
               <div className="faq-drawer__content-wrapper">
@@ -61,10 +64,13 @@ function Track({
             <div className="faq-drawer">
               <input
                 className="faq-drawer__trigger"
-                id="faq-drawer-3"
+                id={'faq-drawer-3' + id}
                 type="checkbox"
               />
-              <label className="faq-drawer__title" htmlFor="faq-drawer-3">
+              <label
+                className="faq-drawer__title"
+                htmlFor={'faq-drawer-3' + id}
+              >
                 Content
               </label>
               <div className="faq-drawer__content-wrapper">
@@ -78,10 +84,13 @@ function Track({
             <div className="faq-drawer">
               <input
                 className="faq-drawer__trigger"
-                id="faq-drawer-4"
+                id={'faq-drawer-4' + id}
                 type="checkbox"
               />
-              <label className="faq-drawer__title" htmlFor="faq-drawer-4">
+              <label
+                className="faq-drawer__title"
+                htmlFor={'faq-drawer-4' + id}
+              >
                 Number of Sessions
               </label>
               <div className="faq-drawer__content-wrapper">

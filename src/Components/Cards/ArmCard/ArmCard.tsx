@@ -15,10 +15,11 @@ function Card() {
         <div className="card__content--container | flow">
           <h2 className="card__title">ARM</h2>
           <p className="card__description">
-            AVR microcontrollers are used in many devices around us like cars,
-            medical equipment, and home appliances. Learning AVR programming can
-            help you develop skills that are in high demand in today's job
-            market.
+            Are you ready to take your embedded systems to the next level? ARM gives you the power to customize your systems to
+            meet specific needs, with built-in security features to keep your
+            data safe. Plus, with a vast ecosystem of development tools,
+            including compilers, debuggers, and simulators, you can collaborate
+            and innovate with like-minded developers.
           </p>
         </div>
 

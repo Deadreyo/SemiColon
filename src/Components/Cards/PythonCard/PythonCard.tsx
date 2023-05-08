@@ -15,10 +15,12 @@ function Card() {
         <div className="card__content--container | flow">
           <h2 className="card__title">Python</h2>
           <p className="card__description">
-            AVR microcontrollers are used in many devices around us like cars,
-            medical equipment, and home appliances. Learning AVR programming can
-            help you develop skills that are in high demand in today's job
-            market.
+            Python is a great programming language for beginners with a simple
+            and straightforward syntax. It has a vast range of applications,
+            from web development to data analysis and machine learning. With its
+            friendly community of developers, there is always someone to turn to
+            if you need help or have a question. So why not give Python a
+            chance?
           </p>
         </div>
 

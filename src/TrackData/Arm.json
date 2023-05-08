@@ -1,0 +1,26 @@
+{
+  "title": "ARM",
+  "objectives": [
+    "1. By the end of this course, you will have a thorough understanding of the STM32F103 microcontroller and its capabilities. You will be able to confidently design and develop embedded systems using arm architecture unlocking its full potential and taking your skills to the next level."
+  ],
+  "requirements": [
+    "1. C/C++ development experience is a must!",
+    "2. Embedded C and dealing with the compilation process is a must",
+    "3. Dealing with any micro-controller is a must",
+    "4. Basic knowledge of Digital electronics."
+  ],
+  "content": [
+    "1. ARM Architecture",
+    "2. RCC Peripheral",
+    "3. DIO Peripheral",
+    "4. NVIC",
+    "5. NVIC Driver",
+    "6. EXTI",
+    "7. SysTick",
+    "8. UART",
+    "9. SPI",
+    "10. DMA"
+  ],
+  "noOfSessions": "8 sessions one each week",
+  "id": "arm"
+}

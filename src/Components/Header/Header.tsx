@@ -4,7 +4,7 @@ import { useRef } from 'react'
 import { useInView } from 'framer-motion'
 
 function Header() {
-   function Header({ children }) {
+   function Header({ children }: { children: React.ReactNode }) {
      const ref = useRef(null)
      const isInView = useInView(ref, { once: true })
 
@@ -22,7 +22,7 @@ function Header() {
        </div>
      )
    }
-   function Div({ children }) {
+   function Div({ children }: { children: React.ReactNode }) {
      const ref = useRef(null)
      const isInView = useInView(ref, { once: true })
 

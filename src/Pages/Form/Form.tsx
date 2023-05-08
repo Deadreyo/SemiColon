@@ -66,6 +66,10 @@ const allOption2 = [
     name: 'Digital',
     value: 'digital',
   },
+  {
+    name: 'Desktop',
+    value: 'desktop',
+  },
 ]
 function Form() {
   const [data, setData] = useState(formData)
@@ -86,6 +90,7 @@ function Form() {
       (select1 === 'arm' && i.value !== 'arm') ||
       (select1 === 'flutter' && i.value !== 'flutter') ||
       (select1 === 'digital' && i.value !== 'digital') ||
+      (select1 === 'desktop' && i.value !== 'desktop') ||
       select1 === 'No-track'
     )
   })
@@ -157,13 +162,16 @@ function Form() {
       setLoading(true)
       let resData
       try {
-        const res = await fetch('http://localhost:9100/participants/add', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ participant: data }),
-        })
+        const res = await fetch(
+          'https://semicolon-registration-backend.onrender.com/',
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ participant: data }),
+          }
+        )
         resData = await res.json()
         setTimeout(() => {
           setThankMessage(true)
@@ -289,8 +297,9 @@ function Form() {
                     <option value="python ">Python</option>
                     <option value="avr">Avr</option>
                     <option value="arm">Arm</option>
-                    <option value="flutter ">Flutter</option>
-                    <option value="digital ">Digital</option>
+                    <option value="flutter">Flutter</option>
+                    <option value="digital">Digital</option>
+                    <option value="desktop">Desktop</option>
                   </select>
                 </div>
               </div>

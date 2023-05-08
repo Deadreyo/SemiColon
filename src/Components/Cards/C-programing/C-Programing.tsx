@@ -14,11 +14,8 @@ function Card() {
         <div className="card__content--container | flow">
           <h2 className="card__title">C-Programming</h2>
           <p className="card__description">
-            Embedded C programming is not just about creating embedded systems,
-            it's also about creating software that interacts with hardware.
-            Learning Embedded C programming can help you develop skills in
-            programming languages like C which are essential for creating
-            embedded systems.
+            Operating systems, games, and mobile apps are all made with the help
+            of the robust and popular programming language C.
           </p>
         </div>
 

@@ -15,10 +15,11 @@ function Card() {
         <div className="card__content--container | flow">
           <h2 className="card__title">AVR</h2>
           <p className="card__description">
-            AVR microcontrollers are used in many devices around us like cars,
-            medical equipment, and home appliances. Learning AVR programming can
-            help you develop skills that are in high demand in today's job
-            market.
+            AVR microcontrollers are widely used in a variety of applications,
+            from simple DIY projects to complex industrial systems. By the end
+            of this course, you will have a solid understanding of how to work
+            with AVR microcontrollers and design your embedded systems using
+            them.
           </p>
         </div>
 

@@ -10,14 +10,20 @@ import FlutterCard from './Components/Cards/FlutterCard/FlutterCard'
 import PythonCard from './Components/Cards/PythonCard/PythonCard'
 import NodejsCard from './Components/Cards/NodejsCard/NodejsCard'
 import ReactCard from './Components/Cards/ReactCard/ReactCard'
+import DesktopCard from './Components/Cards/DesktopCard/Desktop'
 import { useRef } from 'react'
 import { useInView } from 'framer-motion'
 import Track from './Components/Tracks/Track'
 import Flutter from './TrackData/Flutter.json'
 import FrontEnd from './TrackData/FrontEnd.json'
 import Python from './TrackData/Python.json'
+import Avr from './TrackData/Avr.json'
+import FullStack from './TrackData/FullStack.json'
+import CProg from './TrackData/C-Prog.json'
+import Arm from './TrackData/Arm.json'
+import Desktop from './TrackData/Desktop.json'
 
-const tracks = [FrontEnd, Flutter,Python]
+const tracks = [FrontEnd, CProg , FullStack , Avr , Arm , Flutter,Python , Desktop]
 function App() {
   function Section({ children }:{
     children:React.ReactNode
@@ -72,6 +78,9 @@ function App() {
         </Section>
         <Section>
           <ReactCard />
+        </Section>
+        <Section>
+          <DesktopCard />
         </Section>
       </div>
       {tracks.map((item)=> {

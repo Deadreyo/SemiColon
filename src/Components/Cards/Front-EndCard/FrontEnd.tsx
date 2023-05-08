@@ -14,11 +14,11 @@ function Card() {
         <div className="card__content--container | flow">
           <h2 className="card__title">Front-End</h2>
           <p className="card__description">
-            Web development is an exciting field that can lead to many
-            opportunities. Learning web development can help you create
-            beautiful and interactive websites that can be accessed by millions
-            of people around the world. It can also help you develop skills that
-            are in high demand in today's job market. Come Join our Community
+            A Front-End Developer is someone who creates websites and web
+            applications. The difference between Front-End and Back-End is that
+            Front-End refers to how a web page looks, while back-end refers to
+            how it works. You can think of Front-End as client-side and Back-End
+            as server-side.
           </p>
         </div>
 

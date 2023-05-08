@@ -1,0 +1,21 @@
+{
+  "title": "AVR",
+  "objectives": [
+    "1. : By the end of the course you will know the concepts of Embedded Systems and get skilled in writing module drivers to interface with any MCU that will make you compatible to go throw embedded track with many embedded system companies."
+  ],
+  "requirements": ["1.: By the end of the course you will know the concepts of Embedded Systems and get skilled in writing module drivers to interface with any MCU that will make you compatible to go throw embedded track with many embedded system companies.",
+  "2. Good knowledge of Embedded C" ,
+  "3. Basic knowledge of Digital electronics." 
+],
+  "content": [
+    "1. Intro to Embedded Systems.",
+    "2. Interfacing (GPIO & 7 segment & buzzer)",
+    "3. AVR Interrupts",
+    "4. AVR Timers",
+    "5. ADC and ultrasonic ",
+    "6. External Interfacing (LCD & Keypad)",
+    "7. Communication Protocols (UART and SPI)"
+  ],
+  "noOfSessions": "6 sessions in 4 weeks",
+  "id": "avr"
+}
