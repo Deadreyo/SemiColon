@@ -1,6 +1,5 @@
 import '../Card.css'
 import AvrImage from '../../../assets/avr-icon-480x280.jpg'
-import { Link , } from 'react-router-dom'
 
 function Card() {
   return (
@@ -16,16 +15,17 @@ function Card() {
         <div className="card__content--container | flow">
           <h2 className="card__title">AVR</h2>
           <p className="card__description">
-            AVR microcontrollers are used in many devices around us like cars,
-            medical equipment, and home appliances. Learning AVR programming can
-            help you develop skills that are in high demand in today's job
-            market.
+            AVR microcontrollers are widely used in a variety of applications,
+            from simple DIY projects to complex industrial systems. By the end
+            of this course, you will have a solid understanding of how to work
+            with AVR microcontrollers and design your embedded systems using
+            them.
           </p>
         </div>
 
-        <Link className="btn-title" to="/form">
-          <button className="card__button">Join Us</button>
-        </Link>
+        <a className="btn-title" href="#avr">
+          <button className="card__button">Read more</button>
+        </a>
       </div>
     </article>
   )

@@ -66,6 +66,10 @@ const allOption2 = [
     name: 'Digital',
     value: 'digital',
   },
+  {
+    name: 'Desktop',
+    value: 'desktop',
+  },
 ]
 function Form() {
   const [data, setData] = useState(formData)
@@ -86,6 +90,7 @@ function Form() {
       (select1 === 'arm' && i.value !== 'arm') ||
       (select1 === 'flutter' && i.value !== 'flutter') ||
       (select1 === 'digital' && i.value !== 'digital') ||
+      (select1 === 'desktop' && i.value !== 'desktop') ||
       select1 === 'No-track'
     )
   })
@@ -119,19 +124,21 @@ function Form() {
     const phoneRegEx = /^01\d{9}$/
     const emailRegEx = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
     const collegeIdRegEx = /^[0-9]{2}[a-zA-Z0-9][0-9]{4}$/
+    const nameRegEx = /^[A-Za-z\s]*$/
     if (!phoneRegEx.test(data.phone)) {
       alert('Phone Number is invalid')
-      console.log('error')
       setLoading(false)
       setThankMessage(false)
     } else if (!emailRegEx.test(data.email)) {
       alert('Email is invalid')
-      console.log('error')
       setLoading(false)
       setThankMessage(false)
     } else if (!collegeIdRegEx.test(data.collegeId)) {
       alert('College ID  is invalid')
-      console.log('error')
+      setLoading(false)
+      setThankMessage(false)
+    } else if (!nameRegEx.test(data.name)) {
+      alert('Name must not contain number or any special characters')
       setLoading(false)
       setThankMessage(false)
     } else if (
@@ -148,29 +155,35 @@ function Form() {
     ) {
       alert('Please fill all inputs')
       setErrorMessage('Please fill all inputs')
-      console.log('error')
       setLoading(false)
       setThankMessage(false)
     } else {
-      console.log(data)
       setErrorMessage('')
       setLoading(true)
       let resData
       try {
-        const res = await fetch('http://localhost:9100/participants/add', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ participant: data }),
-        })
+        const res = await fetch(
+          'https://semicolon-registration-backend.onrender.com/participants/add',
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ participant: data }),
+          }
+        )
         resData = await res.json()
-        setTimeout(() => {
-          setThankMessage(true)
-        }, 2000)
-        setLoading(true)
+        if (resData.status === 'failure') {
+          alert(resData.data)
+          setSubmitErrorMessage(true)
+          setThankMessage(false)
+        } else {
+          setTimeout(() => {
+            setThankMessage(true)
+          }, 2000)
+          setLoading(true)
+        }
       } catch (err: any) {
-        console.log(resData)
         setTimeout(() => {
           setSubmitErrorMessage(true)
         }, 1000)
@@ -264,11 +277,11 @@ function Form() {
               <hr className="solid"></hr>
               <br />
               <Divider>
-                <Chip 
-                  label="First & Second Preferences" 
+                <Chip
+                  label="First & Second Preferences"
                   color="warning"
-                  style={{ fontSize: '1.1rem', padding: '10px' }} 
-                  size='medium' 
+                  style={{ fontSize: '1.1rem', padding: '10px' }}
+                  size="medium"
                 />
               </Divider>
               <br />
@@ -286,11 +299,12 @@ function Form() {
                     <option value="react">React</option>
                     <option value="fullstack">FullStack</option>
                     <option value="nodejs">Nodejs</option>
-                    <option value="python ">Python</option>
+                    <option value="python">Python</option>
                     <option value="avr">Avr</option>
                     <option value="arm">Arm</option>
-                    <option value="flutter ">Flutter</option>
-                    <option value="digital ">Digital</option>
+                    <option value="flutter">Flutter</option>
+                    <option value="digital">Digital</option>
+                    <option value="desktop">Desktop</option>
                   </select>
                 </div>
               </div>
@@ -346,10 +360,10 @@ function Form() {
               <hr className="solid"></hr>
               <br />
               <Divider>
-                <Chip 
-                  label="Previous Experience" 
+                <Chip
+                  label="Previous Experience"
                   color="warning"
-                  style={{ fontSize: '1.1rem', padding: '10px' }} 
+                  style={{ fontSize: '1.1rem', padding: '10px' }}
                 />
               </Divider>
               <br />

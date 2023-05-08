@@ -4,6 +4,10 @@ import App from './App.tsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Form from './Pages/Form/Form.tsx'
+import SmoothScroll from './Components/SmoothScroll/SmoothScroll.tsx'
+
+
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -11,7 +15,11 @@ const router = createBrowserRouter([
   },
   {
     path: '/form',
-    element: <Form />,
+    element: (
+      <SmoothScroll>
+        <Form />
+      </SmoothScroll>
+    ),
   },
 ])
 

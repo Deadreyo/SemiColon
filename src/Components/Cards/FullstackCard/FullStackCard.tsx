@@ -1,6 +1,5 @@
 import '../Card.css'
 import FullStackImage from '../../../assets/fullStack.png'
-import { Link , } from 'react-router-dom'
 
 function Card() {
   return (
@@ -16,16 +15,17 @@ function Card() {
         <div className="card__content--container | flow">
           <h2 className="card__title">FullStack Dev.</h2>
           <p className="card__description">
-            AVR microcontrollers are used in many devices around us like cars,
-            medical equipment, and home appliances. Learning AVR programming can
-            help you develop skills that are in high demand in today's job
-            market.
+            Full-stack web development refers to web development taking place in
+            both the front and back ends of a website. Full stack web developers
+            have the ability to design complete web applications and websites.
+            They are proficient in both frontend and backend languages and
+            frameworks, as well as in server, network and hosting environments.
           </p>
         </div>
 
-        <Link className="btn-title" to="/form">
-          <button className="card__button">Join Us</button>
-        </Link>
+        <a className="btn-title" href="#fullStack">
+          <button className="card__button">Read more</button>
+        </a>
       </div>
     </article>
   )

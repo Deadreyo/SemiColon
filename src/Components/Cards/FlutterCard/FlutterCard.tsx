@@ -1,6 +1,5 @@
 import '../Card.css'
 import FlutterImage from '../../../assets/flutter.jpg'
-import { Link , } from 'react-router-dom'
 
 function Card() {
   return (
@@ -16,16 +15,17 @@ function Card() {
         <div className="card__content--container | flow">
           <h2 className="card__title">Flutter</h2>
           <p className="card__description">
-            AVR microcontrollers are used in many devices around us like cars,
-            medical equipment, and home appliances. Learning AVR programming can
-            help you develop skills that are in high demand in today's job
-            market.
+            Flutter is a popular mobile app development framework that allows
+            you to build high-quality, natively compiled apps for iOS, Android,
+            and the web from a single codebase. This workshop is designed to
+            introduce you to Flutter and its key concepts, so that you can start
+            building your own mobile apps.
           </p>
         </div>
 
-        <Link className="btn-title" to="/form">
-          <button className="card__button">Join Us</button>
-        </Link>
+        <a className="btn-title" href="#flutter">
+          <button className="card__button">Read more</button>
+        </a>
       </div>
     </article>
   )

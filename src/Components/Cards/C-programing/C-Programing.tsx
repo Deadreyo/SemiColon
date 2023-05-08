@@ -1,6 +1,5 @@
 import '../Card.css'
 import EmbeddedImage from '../../../assets/Embedded C.png'
-import { Link } from 'react-router-dom'
 function Card() {
   return (
     <article className="card">
@@ -15,17 +14,14 @@ function Card() {
         <div className="card__content--container | flow">
           <h2 className="card__title">C-Programming</h2>
           <p className="card__description">
-            Embedded C programming is not just about creating embedded systems,
-            it's also about creating software that interacts with hardware.
-            Learning Embedded C programming can help you develop skills in
-            programming languages like C which are essential for creating
-            embedded systems.
+            Operating systems, games, and mobile apps are all made with the help
+            of the robust and popular programming language C.
           </p>
         </div>
 
-        <Link className="btn-title" to="/form">
-          <button className="card__button">Join Us</button>
-        </Link>
+        <a className="btn-title" href="#cProg">
+          <button className="card__button">Read more</button>
+        </a>
       </div>
     </article>
   )

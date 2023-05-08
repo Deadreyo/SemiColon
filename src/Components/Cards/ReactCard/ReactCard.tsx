@@ -1,6 +1,5 @@
 import '../Card.css'
 import ReactImage from '../../../assets/react.jpg'
-import { Link , } from 'react-router-dom'
 
 function Card() {
   return (
@@ -16,16 +15,18 @@ function Card() {
         <div className="card__content--container | flow">
           <h2 className="card__title">React</h2>
           <p className="card__description">
-            AVR microcontrollers are used in many devices around us like cars,
-            medical equipment, and home appliances. Learning AVR programming can
-            help you develop skills that are in high demand in today's job
-            market.
+            In this workshop, you will have the opportunity to dive deep into
+            the world of React and see how it can be used to develop web
+            applications. You will learn how to build interactive and dynamic
+            user interfaces, integrate with APIs, and much more. Some examples of popular web
+            applications built with React include Facebook, Instagram, and
+            Netflix.
           </p>
         </div>
 
-        <Link className="btn-title" to="/form">
-          <button className="card__button">Join Us</button>
-        </Link>
+        <a className="btn-title" href="#react">
+          <button className="card__button">Read more</button>
+        </a>
       </div>
     </article>
   )
