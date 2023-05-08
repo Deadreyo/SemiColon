@@ -1,5 +1,6 @@
 {
-  "title": "Desktop Development ",
+  "title": "C++ Application Development",
+  "description": "Learning to develop applications using C++ and Qt is very beneficial for aspiring software developers as it provides an opportunity to gain experience with a powerful language and framework that can be used for building complex and sophisticated applications. C++ and Qt introduce many fundamental concepts that help you as a software developer even if you switch later on to different Frameworks or programming languages.",
   "objectives": [
     "1. Learn/Review all the needed c++ concepts",
     "2. Learn how to make GUIs with Qt",
@@ -11,5 +12,6 @@
     "2. making cross-platform desktop apps using Qt"
   ],
   "noOfSessions": " 7:8 sessions in 4:5 weeks",
-  "id": "desktop"
+  "id": "desktop",
+  "image": ""
 }

@@ -1,5 +1,6 @@
 {
   "title": "React",
+  "description": "In this workshop, you will have the opportunity to dive deep into the world of React and see how it can be used to develop web applications. You will learn how to build interactive and dynamic user interfaces, integrate with APIs, and much more. Some examples of popular web applications built with React include Facebook, Instagram, and Netflix.",
   "objectives": [
     "1. Build and deploy a React application.",
     "2. Use JSX to build complex user interfaces.",
@@ -23,5 +24,6 @@
     "6. Testing React Applications"
   ],
   "noOfSessions": "6:7 sessions in 3:4 weeks",
-  "id": "react"
+  "id": "react",
+  "image": ""
 }

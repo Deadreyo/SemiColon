@@ -1,5 +1,6 @@
 {
   "title": "Front-End Development",
+  "description": "HTML, CSS, and JavaScript are the three core technologies that power the modern web. This workshop introduces you to their fundamentals, so you can start building your own websites and web apps. Learn to structure web pages with HTML, style them with CSS, and add interactivity with JavaScript. Gain a solid understanding of syntax and core concepts to continue learning and building your skills.",
   "objectives": [
     "1. You will start your way in Web Development world by a very powerful and easy techniques.",
     "2. In this course you will gain the fundamental and basic concepts of Front-end web development, you will have fundamental knowledge of HTML/CSS syntax."
@@ -14,5 +15,6 @@
     "4. CSS, the language used to style web pages"
   ],
   "noOfSessions": "6 sessions in 4 weeks",
-  "id": "frontEnd"
+  "id": "frontEnd",
+  "image": ""
 }

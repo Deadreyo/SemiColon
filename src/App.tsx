@@ -1,16 +1,5 @@
 import './App.css'
 import Header from './Components/Header/Header'
-import FrontEndCard from './Components/Cards/Front-EndCard/FrontEnd'
-import EmbeddedCard from './Components/Cards/C-programing/C-Programing'
-import AvrCard from './Components/Cards/AvrCard/AvrCard'
-import FullStackCard from './Components/Cards/FullstackCard/FullStackCard'
-import ArmCard from './Components/Cards/ArmCard/ArmCard'
-import DigitalCard from './Components/Cards/DigitalCard/DigitalCard'
-import FlutterCard from './Components/Cards/FlutterCard/FlutterCard'
-import PythonCard from './Components/Cards/PythonCard/PythonCard'
-import NodejsCard from './Components/Cards/NodejsCard/NodejsCard'
-import ReactCard from './Components/Cards/ReactCard/ReactCard'
-import DesktopCard from './Components/Cards/DesktopCard/Desktop'
 import { useRef } from 'react'
 import { useInView } from 'framer-motion'
 import Track from './Components/Tracks/Track'
@@ -25,6 +14,30 @@ import Desktop from './TrackData/Desktop.json'
 import React from './TrackData/React.json'
 import Nodejs from './TrackData/Nodejs.json'
 import Digital from './TrackData/Digital.json'
+import Card from './Components/Cards/Card'
+import ArmImage from './assets/ArmImage.jfif'
+import DesktopImage from './assets/CC--.png'
+import DigitalImage from './assets/digital.jpg'
+import FlutterImage from './assets/flutter.jpg'
+import FrontEndImage from './assets/Web.jpg'
+import FullStackImage from './assets/fullStack.png'
+import NodejsImage from './assets/nodejs.png'
+import PythonImage from './assets/python.jpg'
+import ReactImage from './assets/react.jpg'
+import AvrImage from './assets/avr-icon-480x280.jpg'
+import EmbeddedCImage from './assets/Embedded C.png'
+
+FrontEnd.image = FrontEndImage;
+CProg.image = EmbeddedCImage;
+FullStack.image = FullStackImage;
+Avr.image = AvrImage;
+Arm.image = ArmImage;
+Digital.image = DigitalImage;
+Flutter.image = FlutterImage;
+Nodejs.image = NodejsImage;
+Python.image = PythonImage;
+React.image = ReactImage;
+Desktop.image = DesktopImage;
 
 const tracks = [
   FrontEnd,
@@ -62,39 +75,15 @@ function App() {
     <div className="App">
       <Header />
       <div className="cards-template">
-        <Section>
-          <FrontEndCard />
-        </Section>
-        <Section>
-          <EmbeddedCard />
-        </Section>
-        <Section>
-          <FullStackCard />
-        </Section>
-        <Section>
-          <AvrCard />
-        </Section>
-        <Section>
-          <ArmCard />
-        </Section>
-        <Section>
-          <DigitalCard />
-        </Section>
-        <Section>
-          <FlutterCard />
-        </Section>
-        <Section>
-          <NodejsCard />
-        </Section>
-        <Section>
-          <PythonCard />
-        </Section>
-        <Section>
-          <ReactCard />
-        </Section>
-        <Section>
-          <DesktopCard />
-        </Section>
+        {
+            tracks.map((item) => {
+                return (
+                    <Section>
+                        <Card {...item} />
+                    </Section>
+                )
+            })
+        }
       </div>
       {tracks.map((item) => {
         return (

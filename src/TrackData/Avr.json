@@ -1,5 +1,6 @@
 {
   "title": "AVR",
+  "description": "AVR microcontrollers are widely used in a variety of applications, from simple DIY projects to complex industrial systems. You will learn topics including Embedded Systems, module drivers, DIO, timers, ADC, communication protocols, and more By the end of this course, Join us to build a solid understanding of how to work with AVR microcontrollers and design your embedded systems using them. So let's dive in and start mastering AVR microcontrollers!",
   "objectives": [
     "By the end of the course you will know the concepts of Embedded Systems and get skilled in writing module drivers to interface with any MCU that will make you compatible to go throw embedded track with many embedded system companies."
   ],
@@ -17,5 +18,6 @@
     "7. Communication Protocols (UART and SPI)"
   ],
   "noOfSessions": "6 sessions in 4 weeks",
-  "id": "avr"
+  "id": "avr",
+  "image": ""
 }

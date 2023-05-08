@@ -1,5 +1,6 @@
 {
   "title": "Nodejs",
+  "description": "Welcome to the Node.js course! In this course, you will learn the fundamentals of server-side development with Node.js. Node.js is a popular and powerful JavaScript runtime that allows developers to build fast, scalable, and event-driven server-side applications. You will learn how to build and deploy server-side applications using Node.js and other popular web development technologies.",
   "objectives": [
     "1. Understand the basics of Node.js and its architecture.",
     "2. Build and deploy server-side applications using Node.js.",
@@ -23,5 +24,6 @@
     "6. Deploying Node.js Applications"
   ],
   "noOfSessions": "8 sessions one each week",
-  "id": "nodejs"
+  "id": "nodejs",
+  "image": ""
 }
