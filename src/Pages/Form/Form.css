@@ -17,10 +17,10 @@
   font-family: sans-serif;
   font-size: 36px;
   font-weight: 600;
+  margin: auto;
   margin-top: 15px;
-  width: 50%;
-
   margin-bottom: 10px;
+  text-align: center;
 }
 #top-form {
    display: flex;
