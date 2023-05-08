@@ -219,4 +219,19 @@ p {
   .card {
     margin-left: 0px;
   }
+  .card__title{
+    font-size: 30px
+  }
+  .card__description{
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width:362px) {
+    .card__title{
+      font-size: 29px
+    }
+    .card__description{
+      font-size: 14px;
+    }
 }
