@@ -77,7 +77,6 @@ function Form() {
   const [loading, setLoading] = useState(false)
   const [thankMessage, setThankMessage] = useState(false)
   const [submitErrorMessage, setSubmitErrorMessage] = useState(false)
-  const [statusFailed, setStatusFailed] = useState(false)
   const [select1, setSelect1] = useState('No-track')
   const filterOption2 = allOption2.filter((i) => {
     return (
