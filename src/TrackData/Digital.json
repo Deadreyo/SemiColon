@@ -1,6 +1,6 @@
 {
   "title": "Digital Design",
-  "description": "EDA (Electronic Design Automation) is the process of delving deeper into how most electronic devices, such as microprocessors, memories, and communication devices, are developed and brought to your hands to use in various forms such as laptops, smartphones, and more. In fact, it's a long journey that mainly goes through three steps: designing the architecture of the device using HDL, verifying it with SV, and finally, the layout step to extract the product.",
+  "description": "EDA (Electronic Design Automation) is the process of delving deeper into how most electronic devices, such as microprocessors, memories, and communication devices, are developed and brought to your hands in various forms such as laptops, smartphones, and more. In fact, it's a long journey that goes through three steps: designing the architecture of the device using HDL, verifying it with SV, and finally, the layout step to extract the product.",
   "objectives": [
     "You will learn this course Verilog HDL which used to design in addition to some verification techniques such as coverage & assertions."
   ],
@@ -14,9 +14,9 @@
   "content": [
     "1. Verilog language",
     "2. FSM",
-    "3. SV "
+    "3. SV"
   ],
-  "noOfSessions": "8 sessions one each week",
+  "noOfSessions": "7-8 sessions in 4 week",
   "id": "digital",
   "image": ""
 }

@@ -41,16 +41,16 @@ Desktop.image = DesktopImage;
 
 const tracks = [
   FrontEnd,
-  CProg,
   FullStack,
+  React,
+  Nodejs ,
+  CProg,
   Avr,
   Arm,
+  Desktop,
   Digital ,
   Flutter,
-  Nodejs ,
   Python,
-  React,
-  Desktop,
 ]
 function App() {
   function Section({ children }: { children: React.ReactNode }) {

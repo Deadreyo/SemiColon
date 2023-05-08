@@ -18,12 +18,11 @@
   "content": [
     "1. Introduction to Node.js",
     "2. Building Node.js Applications",
-    "3. Working with Databases and APIs",
+    "3. Express.js",
     "4. Asynchronous Programming with Node.js",
-    "5. Using Node.js with Front-end Frameworks",
-    "6. Deploying Node.js Applications"
+    "5. Using Node.js with Front-end Frameworks"
   ],
-  "noOfSessions": "8 sessions one each week",
+  "noOfSessions": "6-7 sessions in 4-5 weeks",
   "id": "nodejs",
   "image": ""
 }

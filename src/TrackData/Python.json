@@ -7,9 +7,9 @@
   ],
   "requirements": ["You don’t need any skill or any previous experience!"],
   "content": [
-    "Intro, variables, data types, loops, conditional statements, functions and more ."
+    "Intro, variables, data types, loops, conditional statements, functions and more."
   ],
-  "noOfSessions": "7:8 sessions in 4:5 weeks ",
+  "noOfSessions": "7-8 sessions in 4-5 weeks",
   "id": "python",
   "image": ""
 }
