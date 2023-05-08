@@ -75,7 +75,11 @@ function App() {
         </Section>
       </div>
       {tracks.map((item)=> {
-        return  <Track {...item} />
+        return (
+          <Section>
+            <Track {...item} />
+          </Section>
+        )
       })}
     </div>
   )
