@@ -121,7 +121,10 @@ function Form() {
   }
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    data.name.trim();
+    data.name = data.name.trim();
+    data.email = data.email.trim();
+    data.phone = data.phone.trim();
+    data.collegeId = data.collegeId.trim();
     const phoneRegEx = /^01\d{9}$/
     const emailRegEx = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
     const collegeIdRegEx = /^[0-9]{2}[a-zA-Z0-9][0-9]{4}$/
