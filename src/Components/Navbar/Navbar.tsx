@@ -7,7 +7,6 @@ function Navbar() {
   const [btn,setBtn] = useState(false)
   const handleClick = () => {
     setBtn(btn => !btn)
-    console.log(btn)
   }
   const toggleClassCheck = btn && 'mobile-menu'
   return (

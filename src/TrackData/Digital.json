@@ -1,0 +1,20 @@
+{
+  "title": "Digital",
+  "objectives": [
+    "You will learn this course Verilog HDL which used to design in addition to some verification techniques such as coverage & assertions."
+  ],
+  "requirements": [
+    "1. Basic understanding of computer programming concepts",
+    "2. Familiarity with HTML, CSS, and JavaScript",
+    "3. A computer with internet access and a modern web browser" ,
+    "4. A code editor such as Visual Studio Code or Sublime Text" ,
+    "5. Optional: familiarity with a version control system such as Git" 
+  ],
+  "content": [
+    "1. Verilog language",
+    "2. FSM",
+    "3. SV "
+  ],
+  "noOfSessions": "8 sessions one each week",
+  "id": "digital"
+}

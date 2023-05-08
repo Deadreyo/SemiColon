@@ -43,27 +43,6 @@ function Track({
             <div className="faq-drawer">
               <input
                 className="faq-drawer__trigger"
-                id={'faq-drawer-2' + id}
-                type="checkbox"
-              />
-              <label
-                className="faq-drawer__title"
-                htmlFor={'faq-drawer-2' + id}
-              >
-                Requirements
-              </label>
-              <div className="faq-drawer__content-wrapper">
-                <div className="faq-drawer__content">
-                  {requirements.map((item) => {
-                    return <div>{item}</div>
-                  })}
-                </div>
-              </div>
-            </div>
-
-            <div className="faq-drawer">
-              <input
-                className="faq-drawer__trigger"
                 id={'faq-drawer-3' + id}
                 type="checkbox"
               />
@@ -76,6 +55,26 @@ function Track({
               <div className="faq-drawer__content-wrapper">
                 <div className="faq-drawer__content">
                   {content.map((item) => {
+                    return <div>{item}</div>
+                  })}
+                </div>
+              </div>
+            </div>
+            <div className="faq-drawer">
+              <input
+                className="faq-drawer__trigger"
+                id={'faq-drawer-2' + id}
+                type="checkbox"
+              />
+              <label
+                className="faq-drawer__title"
+                htmlFor={'faq-drawer-2' + id}
+              >
+                Requirements
+              </label>
+              <div className="faq-drawer__content-wrapper">
+                <div className="faq-drawer__content">
+                  {requirements.map((item) => {
                     return <div>{item}</div>
                   })}
                 </div>

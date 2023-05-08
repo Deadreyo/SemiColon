@@ -15,10 +15,12 @@ function Card() {
         <div className="card__content--container | flow">
           <h2 className="card__title">Node.js</h2>
           <p className="card__description">
-            AVR microcontrollers are used in many devices around us like cars,
-            medical equipment, and home appliances. Learning AVR programming can
-            help you develop skills that are in high demand in today's job
-            market.
+            Welcome to the Node.js course! In this course, you will learn the
+            fundamentals of server-side development with Node.js. Node.js is a
+            popular and powerful JavaScript runtime that allows developers to
+            build fast, scalable, and event-driven server-side applications. You
+            will learn how to build and deploy server-side applications using
+            Node.js and other popular web development technologies.
           </p>
         </div>
 

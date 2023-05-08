@@ -22,12 +22,25 @@ import FullStack from './TrackData/FullStack.json'
 import CProg from './TrackData/C-Prog.json'
 import Arm from './TrackData/Arm.json'
 import Desktop from './TrackData/Desktop.json'
+import React from './TrackData/React.json'
+import Nodejs from './TrackData/Nodejs.json'
+import Digital from './TrackData/Digital.json'
 
-const tracks = [FrontEnd, CProg , FullStack , Avr , Arm , Flutter,Python , Desktop]
+const tracks = [
+  FrontEnd,
+  CProg,
+  FullStack,
+  Avr,
+  Arm,
+  Digital ,
+  Flutter,
+  Nodejs ,
+  Python,
+  React,
+  Desktop,
+]
 function App() {
-  function Section({ children }:{
-    children:React.ReactNode
-  }) {
+  function Section({ children }: { children: React.ReactNode }) {
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true })
 
@@ -83,10 +96,10 @@ function App() {
           <DesktopCard />
         </Section>
       </div>
-      {tracks.map((item)=> {
+      {tracks.map((item) => {
         return (
           <Section>
-            <Track {...item} key={item.id}/>
+            <Track {...item} key={item.id} />
           </Section>
         )
       })}
@@ -94,4 +107,4 @@ function App() {
   )
 }
 
-export default App;
+export default App

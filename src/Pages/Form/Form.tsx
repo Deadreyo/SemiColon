@@ -77,6 +77,7 @@ function Form() {
   const [loading, setLoading] = useState(false)
   const [thankMessage, setThankMessage] = useState(false)
   const [submitErrorMessage, setSubmitErrorMessage] = useState(false)
+  const [statusFailed, setStatusFailed] = useState(false)
   const [select1, setSelect1] = useState('No-track')
   const filterOption2 = allOption2.filter((i) => {
     return (
@@ -124,19 +125,21 @@ function Form() {
     const phoneRegEx = /^01\d{9}$/
     const emailRegEx = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
     const collegeIdRegEx = /^[0-9]{2}[a-zA-Z0-9][0-9]{4}$/
+    const nameRegEx = /^[A-Za-z\s]*$/
     if (!phoneRegEx.test(data.phone)) {
       alert('Phone Number is invalid')
-      console.log('error')
       setLoading(false)
       setThankMessage(false)
     } else if (!emailRegEx.test(data.email)) {
       alert('Email is invalid')
-      console.log('error')
       setLoading(false)
       setThankMessage(false)
     } else if (!collegeIdRegEx.test(data.collegeId)) {
       alert('College ID  is invalid')
-      console.log('error')
+      setLoading(false)
+      setThankMessage(false)
+    } else if (!nameRegEx.test(data.name)) {
+      alert('Name must not contain number or any special characters')
       setLoading(false)
       setThankMessage(false)
     } else if (
@@ -153,17 +156,15 @@ function Form() {
     ) {
       alert('Please fill all inputs')
       setErrorMessage('Please fill all inputs')
-      console.log('error')
       setLoading(false)
       setThankMessage(false)
     } else {
-      console.log(data)
       setErrorMessage('')
       setLoading(true)
       let resData
       try {
         const res = await fetch(
-          'https://semicolon-registration-backend.onrender.com/',
+          'https://semicolon-registration-backend.onrender.com/participants/add',
           {
             method: 'POST',
             headers: {
@@ -173,12 +174,17 @@ function Form() {
           }
         )
         resData = await res.json()
-        setTimeout(() => {
-          setThankMessage(true)
-        }, 2000)
-        setLoading(true)
+        if (resData.status === 'failure') {
+          alert(resData.data)
+          setSubmitErrorMessage(true)
+          setThankMessage(false)
+        } else {
+          setTimeout(() => {
+            setThankMessage(true)
+          }, 2000)
+          setLoading(true)
+        }
       } catch (err: any) {
-        console.log(resData)
         setTimeout(() => {
           setSubmitErrorMessage(true)
         }, 1000)
@@ -272,11 +278,11 @@ function Form() {
               <hr className="solid"></hr>
               <br />
               <Divider>
-                <Chip 
-                  label="First & Second Preferences" 
+                <Chip
+                  label="First & Second Preferences"
                   color="warning"
-                  style={{ fontSize: '1.1rem', padding: '10px' }} 
-                  size='medium' 
+                  style={{ fontSize: '1.1rem', padding: '10px' }}
+                  size="medium"
                 />
               </Divider>
               <br />
@@ -294,7 +300,7 @@ function Form() {
                     <option value="react">React</option>
                     <option value="fullstack">FullStack</option>
                     <option value="nodejs">Nodejs</option>
-                    <option value="python ">Python</option>
+                    <option value="python">Python</option>
                     <option value="avr">Avr</option>
                     <option value="arm">Arm</option>
                     <option value="flutter">Flutter</option>
@@ -355,10 +361,10 @@ function Form() {
               <hr className="solid"></hr>
               <br />
               <Divider>
-                <Chip 
-                  label="Previous Experience" 
+                <Chip
+                  label="Previous Experience"
                   color="warning"
-                  style={{ fontSize: '1.1rem', padding: '10px' }} 
+                  style={{ fontSize: '1.1rem', padding: '10px' }}
                 />
               </Divider>
               <br />

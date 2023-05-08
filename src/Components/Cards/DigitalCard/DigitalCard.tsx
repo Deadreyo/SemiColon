@@ -15,10 +15,12 @@ function Card() {
         <div className="card__content--container | flow">
           <h2 className="card__title">Digital</h2>
           <p className="card__description">
-            AVR microcontrollers are used in many devices around us like cars,
-            medical equipment, and home appliances. Learning AVR programming can
-            help you develop skills that are in high demand in today's job
-            market.
+            EDA is the way to go deeper in how most electronics devices such as
+            micro-processors , memories , communications devices are brought to
+            your hand and to use it in form of laptops , smart phones ,…etc. in
+            fact it’s a long journey go through mainly three steps design the
+            architecture of the device then verify and finally the layout step
+            to extract the product .
           </p>
         </div>
 

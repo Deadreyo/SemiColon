@@ -1,12 +1,12 @@
 {
   "title": "Python",
   "objectives": [
-    "1. you will start your way in programming world by a very powerful and easy language..",
+    "1. You will start your way in programming world by a very powerful and easy language..",
     "2. In this course you will gain the fundamental and basic concepts of programming, you will start to think in logical way, you will have fundamental knowledge of python syntax and you will improve your problem solving skills."
   ],
-  "requirements": ["1. you don’t need any skill or any previous experience!"],
+  "requirements": ["You don’t need any skill or any previous experience!"],
   "content": [
-    "1. intro, variables, data types, loops, conditional statements, functions and more ."
+    "Intro, variables, data types, loops, conditional statements, functions and more ."
   ],
   "noOfSessions": "7:8 sessions in 4:5 weeks ",
   "id": "python"
