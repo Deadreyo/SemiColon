@@ -2,7 +2,6 @@ import './Track.css'
 import { Link } from 'react-router-dom'
 interface TrackProps {
   title: string
-  image: string
   objectives: string[]
   requirements: string[]
   content: string[]
@@ -86,9 +85,7 @@ function Track({
                 Number of Sessions
               </label>
               <div className="faq-drawer__content-wrapper">
-                <div className="faq-drawer__content">
-                  {noOfSessions}
-                </div>
+                <div className="faq-drawer__content">{noOfSessions}</div>
               </div>
             </div>
           </div>

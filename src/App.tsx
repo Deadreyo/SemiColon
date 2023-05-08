@@ -14,10 +14,10 @@ import { useRef } from 'react'
 import { useInView } from 'framer-motion'
 import Track from './Components/Tracks/Track'
 import Flutter from './TrackData/Flutter.json'
+import FrontEnd from './TrackData/FrontEnd.json'
+import Python from './TrackData/Python.json'
 
-const tracks = [
-  Flutter 
-]
+const tracks = [FrontEnd, Flutter,Python]
 function App() {
   function Section({ children }:{
     children:React.ReactNode
@@ -77,7 +77,7 @@ function App() {
       {tracks.map((item)=> {
         return (
           <Section>
-            <Track {...item} />
+            <Track {...item} key={item.id}/>
           </Section>
         )
       })}

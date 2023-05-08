@@ -1,6 +1,5 @@
 {
     "title": "Flutter" ,
-  "image": "./assets/flutter.jpg",
   "objectives" : [
     "1. Understand the basics of Flutter and its development environment." ,
     "2. Learn how to create user interfaces with Flutter's widgets and layout system." ,

@@ -1,0 +1,18 @@
+{
+  "title": "Front-End Development",
+  "objectives": [
+    "1. you will start your way in Web Development world by a very powerful and easy techniques.",
+    "2. In this course you will gain the fundamental and basic concepts of Front-end web development, you will have fundamental knowledge of HTML/CSS syntax."
+  ],
+  "requirements": [
+    "1. you don’t need any skill or any previous experience!"
+  ],
+  "content": [
+    "1. Basic setup and learning how to learn",
+    "2. Web standards and best practices (such as accessibility and cross-browser compatibility)",
+    "3. HTML, the language that gives web content structure and meaning",
+    "4. CSS, the language used to style web pages"
+  ],
+  "noOfSessions": "6 sessions in 4 weeks",
+  "id": "frontEnd"
+}
