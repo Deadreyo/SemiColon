@@ -40,6 +40,7 @@ React.image = ReactImage;
 Desktop.image = DesktopImage;
 
 const tracks = [
+  Python,
   FrontEnd,
   FullStack,
   React,
@@ -48,9 +49,8 @@ const tracks = [
   CProg,
   Avr,
   Arm,
-  Digital,
   Flutter,
-  Python,
+  Digital,
 ]
 function App() {
   function Section({ children }: { children: React.ReactNode }) {
