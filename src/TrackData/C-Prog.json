@@ -18,7 +18,8 @@
     "7. Dynamic Memory Allocation  ",
     "8. Struct, Union, and Enum ",
     "9. Memory [Data modifiers and visibility Modifiers, Memory Layout(.bss,.data),Files in C ] ",
-    "10. Preprocessor directive, toolchain "
+    "10. Preprocessor directive, toolchain",
+    "11. Data Structure"
   ],
   "noOfSessions": "9-12 Sessions in 4 week",
   "id": "cProg",
