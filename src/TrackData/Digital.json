@@ -5,7 +5,7 @@
     "You will learn this course Verilog HDL which used to design in addition to some verification techniques such as coverage & assertions."
   ],
   "requirements": [
-    "No requirements needed."
+    "Basic knowledge in logic design."
   ],
   "content": [
     "1. Verilog language",
