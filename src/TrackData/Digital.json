@@ -1,15 +1,11 @@
 {
   "title": "Digital Design",
-  "description": "EDA is the process of delving deeper into how most electronic devices, such as microprocessors, memories, and communication devices, are developed and brought to your hands in various forms such as laptops, smartphones, and more. In fact, it's a long journey that goes through three steps: designing the architecture of the device using HDL, verifying it with SV, and finally, the layout step to extract the product.",
+  "description": "EDA is the process of diving deeper into how most electronic devices, such as microprocessors, memories, and communication devices, are developed and brought to your hands in various forms such as laptops, smartphones, and more. In fact, it's a long journey that goes through three steps: designing the architecture of the device using HDL, verifying it with SV, and finally, the layout step to extract the product.",
   "objectives": [
     "You will learn this course Verilog HDL which used to design in addition to some verification techniques such as coverage & assertions."
   ],
   "requirements": [
-    "1. Basic understanding of computer programming concepts",
-    "2. Familiarity with HTML, CSS, and JavaScript",
-    "3. A computer with internet access and a modern web browser" ,
-    "4. A code editor such as Visual Studio Code or Sublime Text" ,
-    "5. Optional: familiarity with a version control system such as Git" 
+    "No requirements needed."
   ],
   "content": [
     "1. Verilog language",
