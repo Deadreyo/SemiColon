@@ -127,7 +127,6 @@ function Form() {
     data.collegeId = data.collegeId.trim();
     const phoneRegEx = /^01\d{9}$/
     const emailRegEx = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
-    const collegeIdRegEx = /^[0-9]{2}[a-zA-Z0-9][0-9]{4}$/
     const nameRegEx = /^[A-Za-z\s]*$/
     if (!phoneRegEx.test(data.phone)) {
       alert('Phone Number is invalid')
@@ -135,10 +134,6 @@ function Form() {
       setThankMessage(false)
     } else if (!emailRegEx.test(data.email)) {
       alert('Email is invalid')
-      setLoading(false)
-      setThankMessage(false)
-    } else if (!collegeIdRegEx.test(data.collegeId)) {
-      alert('College ID  is invalid')
       setLoading(false)
       setThankMessage(false)
     } else if (!nameRegEx.test(data.name)) {
@@ -264,10 +259,9 @@ function Form() {
                   className="input"
                   placeholder=" "
                   onChange={handleChange}
-                  required
                 />
                 <div className="cut cut-short"></div>
-                <label className="placeholder">College ID *</label>
+                <label className="placeholder">College ID</label>
               </div>
               <div className="drop-down">
                 <div className="select">
