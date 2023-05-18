@@ -27,17 +27,17 @@ import ReactImage from './assets/react.jpg'
 import AvrImage from './assets/avr-icon-480x280.jpg'
 import EmbeddedCImage from './assets/Embedded C.png'
 
-FrontEnd.image = FrontEndImage;
-CProg.image = EmbeddedCImage;
-FullStack.image = FullStackImage;
-Avr.image = AvrImage;
-Arm.image = ArmImage;
-Digital.image = DigitalImage;
-Flutter.image = FlutterImage;
-Nodejs.image = NodejsImage;
-Python.image = PythonImage;
-React.image = ReactImage;
-Desktop.image = DesktopImage;
+FrontEnd.image = FrontEndImage
+CProg.image = EmbeddedCImage
+FullStack.image = FullStackImage
+Avr.image = AvrImage
+Arm.image = ArmImage
+Digital.image = DigitalImage
+Flutter.image = FlutterImage
+Nodejs.image = NodejsImage
+Python.image = PythonImage
+React.image = ReactImage
+Desktop.image = DesktopImage
 
 const tracks = [
   Python,
@@ -75,15 +75,13 @@ function App() {
     <div className="App">
       <Header />
       <div className="cards-template">
-        {
-            tracks.map((item) => {
-                return (
-                    <Section>
-                        <Card {...item} />
-                    </Section>
-                )
-            })
-        }
+        {tracks.map((item) => {
+          return (
+            <Section>
+              <Card {...item} />
+            </Section>
+          )
+        })}
       </div>
       {tracks.map((item) => {
         return (

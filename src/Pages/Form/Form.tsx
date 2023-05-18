@@ -6,6 +6,9 @@ import ThankYou from '../../Components/ThankYou/ThankYou'
 import Divider from '@mui/material/Divider'
 import Chip from '@mui/material/Chip'
 import SubmitError from '../../Components/SubmitError/SubmitError'
+import FormClosed from '../../Components/FormClosed/FormClosed'
+
+const FORM_CLOSED = true
 
 const formData = {
   name: '',
@@ -94,6 +97,7 @@ function Form() {
       select1 === 'No-track'
     )
   })
+
   const handleChange = (
     event:
       | React.ChangeEvent<HTMLInputElement>
@@ -121,10 +125,10 @@ function Form() {
   }
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    data.name = data.name.trim();
-    data.email = data.email.trim();
-    data.phone = data.phone.trim();
-    data.collegeId = data.collegeId.trim();
+    data.name = data.name.trim()
+    data.email = data.email.trim()
+    data.phone = data.phone.trim()
+    data.collegeId = data.collegeId.trim()
     const phoneRegEx = /^01\d{9}$/
     const emailRegEx = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
     const nameRegEx = /^[A-Za-z\s]*$/
@@ -146,11 +150,11 @@ function Form() {
       data.firstPreference === '' ||
       data.secondPreference === 'No-track' ||
       data.firstPrefKnowledge === '' ||
-    //   data.firstPrefReason === '' ||
+      //   data.firstPrefReason === '' ||
       data.secondPreference === '' ||
       data.secondPreference === 'no track'
-    //   data.secondPrefReason === '' ||
-    //   data.pastExperience === ''
+      //   data.secondPrefReason === '' ||
+      //   data.pastExperience === ''
     ) {
       alert('Please fill all the required inputs')
       setErrorMessage('Please fill all the required inputs')
@@ -199,7 +203,9 @@ function Form() {
           <div id="top-form">
             <div className="title">Workshop Registration</div>
           </div>
-          {loading ? (
+          {FORM_CLOSED ? (
+            <FormClosed />
+          ) : loading ? (
             <Loading />
           ) : (
             <>

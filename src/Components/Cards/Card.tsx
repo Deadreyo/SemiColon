@@ -1,18 +1,13 @@
 import './Card.css'
 
 interface CardProps {
-    title: string
-    description: string
-    image: string
-    id: string
+  title: string
+  description: string
+  image: string
+  id: string
 }
 
-function Card({
-    title,
-    description,
-    image,
-    id
-}: CardProps) {
+function Card({ title, description, image, id }: CardProps) {
   return (
     <article className="card">
       <img
@@ -25,9 +20,7 @@ function Card({
       <div className="card__content | flow">
         <div className="card__content--container | flow">
           <h2 className="card__title">{title}</h2>
-          <p className="card__description">
-            {description}
-          </p>
+          <p className="card__description">{description}</p>
         </div>
 
         <a className="btn-title" href={`#${id}`}>
