@@ -1,5 +1,5 @@
-import './Unavailable.css'
-function Unavailable() {
+import './FormClosed.css'
+function FormClosed() {
   return (
     <div>
       <div className="form-unavailable-message">
@@ -14,4 +14,4 @@ function Unavailable() {
   )
 }
 
-export default Unavailable
+export default FormClosed

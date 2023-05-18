@@ -6,7 +6,9 @@ import ThankYou from '../../Components/ThankYou/ThankYou'
 import Divider from '@mui/material/Divider'
 import Chip from '@mui/material/Chip'
 import SubmitError from '../../Components/SubmitError/SubmitError'
-import Unavailable from '../../Components/Unavailable/Unavailable'
+import FormClosed from '../../Components/FormClosed/FormClosed'
+
+const FORM_CLOSED = true;
 
 const formData = {
   name: '',
@@ -95,7 +97,7 @@ function Form() {
       select1 === 'No-track'
     )
   })
-  const [unavailableMessage,setUnavailableMessage] =useState(true)
+
   const handleChange = (
     event:
       | React.ChangeEvent<HTMLInputElement>
@@ -201,8 +203,8 @@ function Form() {
           <div id="top-form">
             <div className="title">Workshop Registration</div>
           </div>
-          {unavailableMessage ? (
-            <Unavailable />
+          {FORM_CLOSED ? (
+            <FormClosed />
           ) : loading ? (
             <Loading />
           ) : (
