@@ -8,7 +8,7 @@ import Chip from '@mui/material/Chip'
 import SubmitError from '../../Components/SubmitError/SubmitError'
 import FormClosed from '../../Components/FormClosed/FormClosed'
 
-const FORM_CLOSED = true;
+const FORM_CLOSED = true
 
 const formData = {
   name: '',
@@ -125,10 +125,10 @@ function Form() {
   }
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    data.name = data.name.trim();
-    data.email = data.email.trim();
-    data.phone = data.phone.trim();
-    data.collegeId = data.collegeId.trim();
+    data.name = data.name.trim()
+    data.email = data.email.trim()
+    data.phone = data.phone.trim()
+    data.collegeId = data.collegeId.trim()
     const phoneRegEx = /^01\d{9}$/
     const emailRegEx = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
     const nameRegEx = /^[A-Za-z\s]*$/
@@ -150,11 +150,11 @@ function Form() {
       data.firstPreference === '' ||
       data.secondPreference === 'No-track' ||
       data.firstPrefKnowledge === '' ||
-    //   data.firstPrefReason === '' ||
+      //   data.firstPrefReason === '' ||
       data.secondPreference === '' ||
       data.secondPreference === 'no track'
-    //   data.secondPrefReason === '' ||
-    //   data.pastExperience === ''
+      //   data.secondPrefReason === '' ||
+      //   data.pastExperience === ''
     ) {
       alert('Please fill all the required inputs')
       setErrorMessage('Please fill all the required inputs')
@@ -396,7 +396,6 @@ function Form() {
               <div className="error-mess">{errorMessage}</div>
             </>
           )}
-          
 
           {thankMessage && <ThankYou />}
         </form>

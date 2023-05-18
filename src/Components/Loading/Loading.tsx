@@ -1,7 +1,7 @@
 import './Loading.css'
 function Loading() {
   return (
-    <div className='loading-div'>
+    <div className="loading-div">
       <div
         aria-label="Orange and tan hamster running in a metal wheel"
         role="img"
@@ -24,7 +24,6 @@ function Loading() {
         </div>
         <div className="spoke"></div>
       </div>
-      
     </div>
   )
 }

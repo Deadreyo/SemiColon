@@ -1,12 +1,12 @@
-import  { useState } from 'react'
+import { useState } from 'react'
 import './Navbar.css'
-import logo from "../../assets/Logo.png"
-import { Icon } from "@iconify/react";
+import logo from '../../assets/Logo.png'
+import { Icon } from '@iconify/react'
 import { Link } from 'react-router-dom'
 function Navbar() {
-  const [btn,setBtn] = useState(false)
+  const [btn, setBtn] = useState(false)
   const handleClick = () => {
-    setBtn(btn => !btn)
+    setBtn((btn) => !btn)
   }
   const toggleClassCheck = btn && 'mobile-menu'
   return (
@@ -21,13 +21,19 @@ function Navbar() {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="https://www.facebook.com/elite.team.asu" target="_blank">About Us</a>
+              <a href="https://www.facebook.com/elite.team.asu" target="_blank">
+                About Us
+              </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/elite.team.asu" target="_blank">Join Us</a>
+              <a href="https://www.facebook.com/elite.team.asu" target="_blank">
+                Join Us
+              </a>
             </li>
             <li>
-              <a href="https://www.facebook.com/elite.team.asu" target="_blank">Contact</a>
+              <a href="https://www.facebook.com/elite.team.asu" target="_blank">
+                Contact
+              </a>
             </li>
           </ul>
         </div>
@@ -42,6 +48,6 @@ function Navbar() {
   )
 }
 
-<img src={logo} alt="Logo" className="logo-pic" />;
+;<img src={logo} alt="Logo" className="logo-pic" />
 
 export default Navbar
