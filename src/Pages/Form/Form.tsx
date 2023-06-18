@@ -129,7 +129,7 @@ function Form() {
       setThankMessage(false)
     } else if (
       data.year === '' ||
-      data.year === 'No-year' ||
+      data.year === '' ||
       data.firstPreference === '' ||
       data.secondPreference === '' ||
       data.firstPrefKnowledge === '' ||
@@ -251,8 +251,8 @@ function Form() {
               </div>
               <div className="drop-down">
                 <div className="select">
-                  <select className="options" id="year" onChange={handleChange}>
-                    <option value="No-year">Year</option>
+                  <select className="options" id="year" onChange={handleChange} required>
+                    <option value="">Year</option>
                     <option value="Freshman">Freshman</option>
                     <option value="Sophomore">Sophomore</option>
                     <option value="Junior">Junior</option>
