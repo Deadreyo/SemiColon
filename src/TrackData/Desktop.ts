@@ -19,6 +19,7 @@ const desktop: TrackData = {
   noOfSessions: ' 7-8 sessions in 4-5 weeks',
   id: 'desktop',
   image: DesktopImage,
+  active: false,
 }
 
 export default desktop

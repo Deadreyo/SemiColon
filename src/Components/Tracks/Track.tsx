@@ -7,6 +7,7 @@ interface TrackProps {
   content: string[]
   noOfSessions: string
   id: string
+  active: boolean
 }
 function Track({
   title,
@@ -15,6 +16,7 @@ function Track({
   content,
   noOfSessions,
   id,
+  active,
 }: TrackProps) {
   return (
     <div className="blog" id={id}>
@@ -98,9 +100,15 @@ function Track({
             </div>
           </div>
           <div className="btn-cont">
-            <Link to="/form">
-              <button className="btn_primary">Join Us</button>
-            </Link>
+            {active ? (
+              <Link to="/form">
+                <button className="btn_primary">Join Us</button>
+              </Link>
+            ) : (
+              <button className="btn_primary btn-disabled" disabled>
+                Coming Soon
+              </button>
+            )}
           </div>
         </div>
       </div>

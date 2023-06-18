@@ -15,6 +15,7 @@ const python: TrackData = {
   noOfSessions: '7-8 sessions in 4-5 weeks',
   id: 'python',
   image: PythonImage,
+  active: false,
 }
 
 export default python

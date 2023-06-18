@@ -7,4 +7,5 @@ export default interface TrackData {
   noOfSessions: string
   id: string
   image: string
+  active: boolean
 }

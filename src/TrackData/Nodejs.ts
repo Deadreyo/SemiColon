@@ -28,6 +28,7 @@ const nodejs: TrackData = {
   noOfSessions: '6-7 sessions in 4-5 weeks',
   id: 'nodejs',
   image: NodejsImage,
+  active: false,
 }
 
 export default nodejs

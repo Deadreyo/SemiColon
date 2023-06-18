@@ -28,6 +28,7 @@ const cProg: TrackData = {
   noOfSessions: '9-12 Sessions in 4 week',
   id: 'cProg',
   image: EmbeddedCImage,
+  active: true,
 }
 
 export default cProg

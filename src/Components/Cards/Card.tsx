@@ -5,11 +5,12 @@ interface CardProps {
   description: string
   image: string
   id: string
+  active: boolean
 }
 
-function Card({ title, description, image, id }: CardProps) {
+function Card({ title, description, image, id, active }: CardProps) {
   return (
-    <article className="card">
+    <article className={`card ${!active && 'card-disabled'}`}>
       <img
         className="card__background"
         src={image}

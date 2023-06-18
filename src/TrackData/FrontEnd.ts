@@ -21,6 +21,7 @@ const frontEnd: TrackData = {
   noOfSessions: '6-8 sessions in 4-5 weeks',
   id: 'frontEnd',
   image: FrontEndImage,
+  active: false,
 }
 
 export default frontEnd

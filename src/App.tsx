@@ -29,7 +29,12 @@ const tracks: TrackData[] = [
   Arm,
   Flutter,
   Digital,
-]
+].sort((a, b) => {
+  // sort based on active property
+  if (a.active && !b.active) return -1
+  if (!a.active && b.active) return 1
+  return 0
+})
 
 function App() {
   function Section({ children }: { children: React.ReactNode }) {

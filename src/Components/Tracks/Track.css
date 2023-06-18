@@ -89,6 +89,7 @@
   z-index: 1;
   margin-top: 1rem;
 }
+
 .btn_primary:hover {
   animation: ani 8s linear infinite;
   border: none;
@@ -126,6 +127,9 @@
   background: linear-gradient(32deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
 }
 
+.btn-disabled {
+    filter: brightness(0.3);
+}
 
 
 .container {
