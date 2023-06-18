@@ -8,7 +8,7 @@ import Chip from '@mui/material/Chip'
 import SubmitError from '../../Components/SubmitError/SubmitError'
 import FormClosed from '../../Components/FormClosed/FormClosed'
 
-const FORM_CLOSED = true
+const FORM_CLOSED = false
 
 const formData = {
   name: '',
@@ -26,7 +26,7 @@ const formData = {
 
 const allOption2 = [
   {
-    name: 'Second Preference *',
+    name: 'Second Preference',
     value: 'No-track',
   },
   {
@@ -231,7 +231,7 @@ function Form() {
                 />
                 <div className="cut cut-short"></div>
                 <label htmlFor="first-name" className="placeholder">
-                  Name (In English) *
+                  Name (In English)
                 </label>
               </div>
               <div className="input-container ic2">
@@ -245,7 +245,7 @@ function Form() {
                 />
                 <div className="cut cut-short"></div>
                 <label htmlFor="email" className="placeholder">
-                  Personal Email *
+                  Personal Email
                 </label>
               </div>
               <div className="input-container ic2">
@@ -257,7 +257,7 @@ function Form() {
                   required
                 />
                 <div className="cut cut-short"></div>
-                <label className="placeholder">Phone Number *</label>
+                <label className="placeholder">Phone Number</label>
               </div>
               <div className="input-container ic2">
                 <input
@@ -267,12 +267,12 @@ function Form() {
                   onChange={handleChange}
                 />
                 <div className="cut cut-short"></div>
-                <label className="placeholder">College ID</label>
+                <label className="placeholder">College ID (Optional)</label>
               </div>
               <div className="drop-down">
                 <div className="select">
                   <select className="options" id="year" onChange={handleChange}>
-                    <option value="No-year">Year *</option>
+                    <option value="No-year">Year</option>
                     <option value="Freshman">Freshman</option>
                     <option value="Sophomore">Sophomore</option>
                     <option value="Junior">Junior</option>
@@ -301,7 +301,7 @@ function Form() {
                     id="firstPreference"
                     onChange={handleChangeSecondSelect}
                   >
-                    <option value="No-track">First Preference *</option>
+                    <option value="No-track">First Preference</option>
                     <option value="frontend">FrontEnd</option>
                     <option value="c-prog">C Programming</option>
                     <option value="react">React</option>
@@ -326,7 +326,7 @@ function Form() {
                 />
                 <div className="cut cut-short"></div>
                 <label className="placeholder">
-                  Previous experience in first preference *
+                  Previous experience in first preference
                 </label>
               </div>
               <div className="input-container ic2 text-area">
@@ -336,9 +336,9 @@ function Form() {
                   placeholder=" "
                   onChange={handleChange}
                 />
-                <div className="cut cut-short"></div>
+                <div className="cut cut-long"></div>
                 <label className="placeholder">
-                  Reason of interest in this first preference
+                  Reason of interest in this first preference (Optional)
                 </label>
               </div>
               <div className="select">
@@ -361,9 +361,9 @@ function Form() {
                   placeholder=" "
                   onChange={handleChange}
                 />
-                <div className="cut cut-short"></div>
+                <div className="cut cut-long"></div>
                 <label className="placeholder">
-                  Reason of interest in this second preference
+                  Reason of interest in this second preference (Optional)
                 </label>
               </div>
               <hr className="solid"></hr>
@@ -384,9 +384,9 @@ function Form() {
                   placeholder=" "
                   onChange={handleChange}
                 />
-                <div className="cut cut-short"></div>
+                <div className="cut cut-long"></div>
                 <label className="placeholder">
-                  Previous student activity experience
+                  Previous student activity experience (Optional)
                 </label>
               </div>
               <hr className="solid"></hr>

@@ -120,7 +120,11 @@ input[type=number] {
 
 .cut-short {
   width: 250px;
-  
+}
+
+.cut-long {
+  width: 350px;
+  max-width: 92%;
 }
 
 .input:focus ~ .cut,
@@ -184,7 +188,7 @@ input[type=number] {
    .form {
   width: 97%;
 }
-.select {
+/* .select {
    width: 60%;
-}
+} */
 }
