@@ -26,50 +26,50 @@ const formData = {
 
 // TODO: Extract options from TrackData files with "true" active property
 const allOptions = [
-  {
-    name: 'FrontEnd',
-    value: 'frontend',
-  },
+//   {
+//     name: 'FrontEnd',
+//     value: 'frontend',
+//   },
   {
     name: 'C Programming',
     value: 'c-prog',
   },
-  {
-    name: 'React',
-    value: 'react',
-  },
+//   {
+//     name: 'React',
+//     value: 'react',
+//   },
   {
     name: 'FullStack',
     value: 'fullstack',
   },
-  {
-    name: 'Nodejs',
-    value: 'nodejs',
-  },
-  {
-    name: 'Python',
-    value: 'python',
-  },
-  {
-    name: 'Avr',
-    value: 'avr',
-  },
-  {
-    name: 'Arm',
-    value: 'arm',
-  },
-  {
-    name: 'Flutter',
-    value: 'flutter',
-  },
-  {
-    name: 'Digital',
-    value: 'digital',
-  },
-  {
-    name: 'Desktop',
-    value: 'desktop',
-  },
+//   {
+//     name: 'Nodejs',
+//     value: 'nodejs',
+//   },
+//   {
+//     name: 'Python',
+//     value: 'python',
+//   },
+//   {
+//     name: 'Avr',
+//     value: 'avr',
+//   },
+//   {
+//     name: 'Arm',
+//     value: 'arm',
+//   },
+//   {
+//     name: 'Flutter',
+//     value: 'flutter',
+//   },
+//   {
+//     name: 'Digital',
+//     value: 'digital',
+//   },
+//   {
+//     name: 'Desktop',
+//     value: 'desktop',
+//   },
 ]
 
 function Form() {
