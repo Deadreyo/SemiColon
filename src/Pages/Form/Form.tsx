@@ -24,11 +24,8 @@ const formData = {
   pastExperience: '',
 }
 
-const allOption2 = [
-  {
-    name: 'Second Preference',
-    value: 'No-track',
-  },
+// TODO: Extract options from TrackData files with "true" active property
+const allOptions = [
   {
     name: 'FrontEnd',
     value: 'frontend',
@@ -74,29 +71,15 @@ const allOption2 = [
     value: 'desktop',
   },
 ]
+
 function Form() {
   const [data, setData] = useState(formData)
   const [errorMessage, setErrorMessage] = useState('')
   const [loading, setLoading] = useState(false)
   const [thankMessage, setThankMessage] = useState(false)
   const [submitErrorMessage, setSubmitErrorMessage] = useState(false)
-  const [select1, setSelect1] = useState('No-track')
-  const filterOption2 = allOption2.filter((i) => {
-    return (
-      (select1 === 'frontend' && i.value !== 'frontend') ||
-      (select1 === 'c-prog' && i.value !== 'c-prog') ||
-      (select1 === 'react' && i.value !== 'react') ||
-      (select1 === 'fullstack' && i.value !== 'fullstack') ||
-      (select1 === 'nodejs' && i.value !== 'nodejs') ||
-      (select1 === 'python' && i.value !== 'python') ||
-      (select1 === 'avr' && i.value !== 'avr') ||
-      (select1 === 'arm' && i.value !== 'arm') ||
-      (select1 === 'flutter' && i.value !== 'flutter') ||
-      (select1 === 'digital' && i.value !== 'digital') ||
-      (select1 === 'desktop' && i.value !== 'desktop') ||
-      select1 === 'No-track'
-    )
-  })
+  const [firstPref, setFirstPref] = useState('')
+  const filterOptions2ndPref = allOptions.filter((op) => op.value !== firstPref)
 
   const handleChange = (
     event:
@@ -121,7 +104,7 @@ function Form() {
       ...data,
       [id]: value,
     })
-    setSelect1(event.target.value)
+    setFirstPref(event.target.value)
   }
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
@@ -148,13 +131,10 @@ function Form() {
       data.year === '' ||
       data.year === 'No-year' ||
       data.firstPreference === '' ||
-      data.secondPreference === 'No-track' ||
-      data.firstPrefKnowledge === '' ||
-      //   data.firstPrefReason === '' ||
       data.secondPreference === '' ||
-      data.secondPreference === 'no track'
-      //   data.secondPrefReason === '' ||
-      //   data.pastExperience === ''
+      data.firstPrefKnowledge === '' ||
+      data.secondPreference === '' ||
+      data.secondPreference === ''
     ) {
       alert('Please fill all the required inputs')
       setErrorMessage('Please fill all the required inputs')
@@ -300,19 +280,12 @@ function Form() {
                     className="options"
                     id="firstPreference"
                     onChange={handleChangeSecondSelect}
+                    required
                   >
-                    <option value="No-track">First Preference</option>
-                    <option value="frontend">FrontEnd</option>
-                    <option value="c-prog">C Programming</option>
-                    <option value="react">React</option>
-                    <option value="fullstack">FullStack</option>
-                    <option value="nodejs">Nodejs</option>
-                    <option value="python">Python</option>
-                    <option value="avr">Avr</option>
-                    <option value="arm">Arm</option>
-                    <option value="flutter">Flutter</option>
-                    <option value="digital">Digital</option>
-                    <option value="desktop">Desktop</option>
+                    <option value="">First Preference</option>
+                    {allOptions.map((op) => (
+                      <option value={op.value}>{op.name}</option>
+                    ))}
                   </select>
                 </div>
               </div>
@@ -346,9 +319,11 @@ function Form() {
                   className="options"
                   id="secondPreference"
                   onChange={handleChange}
+                  required
                 >
-                  {filterOption2.map((op) => (
-                    <option key={select1 + op.value} value={op.value}>
+                  <option value="">Second Preference</option>
+                  {filterOptions2ndPref.map((op) => (
+                    <option key={firstPref + op.value} value={op.value}>
                       {op.name}
                     </option>
                   ))}
