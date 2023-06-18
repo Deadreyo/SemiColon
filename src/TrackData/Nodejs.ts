@@ -1,4 +1,5 @@
-{
+import NodejsImage from '../assets/nodejs.png'
+const nodejs = {
   "title": "Backend with Nodejs",
   "description": "Welcome to the Node.js course! In this course, you will learn the fundamentals of server-side development with Node.js. Node.js is a popular and powerful JavaScript runtime that allows developers to build fast, scalable, and event-driven server-side applications. You will learn how to build and deploy server-side applications using Node.js and other popular web development technologies.",
   "objectives": [
@@ -24,5 +25,7 @@
   ],
   "noOfSessions": "6-7 sessions in 4-5 weeks",
   "id": "nodejs",
-  "image": ""
+  "image": NodejsImage
 }
+
+export default nodejs;

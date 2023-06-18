@@ -3,46 +3,23 @@ import Header from './Components/Header/Header'
 import { useRef } from 'react'
 import { useInView } from 'framer-motion'
 import Track from './Components/Tracks/Track'
-import Flutter from './TrackData/Flutter.json'
-import FrontEnd from './TrackData/FrontEnd.json'
-import Python from './TrackData/Python.json'
-import Avr from './TrackData/Avr.json'
-import FullStack from './TrackData/FullStack.json'
-import CProg from './TrackData/C-Prog.json'
-import Arm from './TrackData/Arm.json'
-import Desktop from './TrackData/Desktop.json'
-import React from './TrackData/React.json'
-import Nodejs from './TrackData/Nodejs.json'
-import Digital from './TrackData/Digital.json'
+import Flutter from './TrackData/Flutter'
+import FrontEnd from './TrackData/FrontEnd'
+import Python from './TrackData/Python'
+import Avr from './TrackData/Avr'
+import fullStack from './TrackData/FullStack'
+import CProg from './TrackData/C-Prog'
+import Arm from './TrackData/Arm'
+import Desktop from './TrackData/Desktop'
+import React from './TrackData/React'
+import Nodejs from './TrackData/Nodejs'
+import Digital from './TrackData/Digital'
 import Card from './Components/Cards/Card'
-import ArmImage from './assets/ArmImage.jfif'
-import DesktopImage from './assets/CC--.png'
-import DigitalImage from './assets/digital.jpg'
-import FlutterImage from './assets/flutter.jpg'
-import FrontEndImage from './assets/Web.jpg'
-import FullStackImage from './assets/fullStack.png'
-import NodejsImage from './assets/nodejs.png'
-import PythonImage from './assets/python.jpg'
-import ReactImage from './assets/react.jpg'
-import AvrImage from './assets/avr-icon-480x280.jpg'
-import EmbeddedCImage from './assets/Embedded C.png'
-
-FrontEnd.image = FrontEndImage
-CProg.image = EmbeddedCImage
-FullStack.image = FullStackImage
-Avr.image = AvrImage
-Arm.image = ArmImage
-Digital.image = DigitalImage
-Flutter.image = FlutterImage
-Nodejs.image = NodejsImage
-Python.image = PythonImage
-React.image = ReactImage
-Desktop.image = DesktopImage
 
 const tracks = [
   Python,
   FrontEnd,
-  FullStack,
+  fullStack,
   React,
   Nodejs,
   Desktop,
@@ -52,6 +29,7 @@ const tracks = [
   Flutter,
   Digital,
 ]
+
 function App() {
   function Section({ children }: { children: React.ReactNode }) {
     const ref = useRef(null)

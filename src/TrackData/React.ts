@@ -1,4 +1,5 @@
-{
+import ReactImage from '../assets/react.jpg'
+const react = {
   "title": "React",
   "description": "In this workshop, you will have the opportunity to dive deep into the world of React and see how it can be used to develop web applications. You will learn how to build interactive and dynamic user interfaces, integrate with APIs, and much more. Some examples of popular web applications built with React include Facebook, Instagram, and Netflix.",
   "objectives": [
@@ -25,5 +26,7 @@
   ],
   "noOfSessions": "6-7 sessions in 4-5 weeks",
   "id": "react",
-  "image": ""
+  "image": ReactImage
 }
+
+export default react;

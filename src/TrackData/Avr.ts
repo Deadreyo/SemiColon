@@ -1,4 +1,5 @@
-{
+import AvrImage from '../assets/avr-icon-480x280.jpg'
+const Avr = {
   "title": "AVR",
   "description": "AVR microcontrollers are widely used in a variety of applications, from simple DIY projects to complex industrial systems. You will learn topics including Embedded Systems, module drivers, DIO, timers, ADC, communication protocols, and more By the end of this course, Join us to build a solid understanding of how to work with AVR microcontrollers and design your embedded systems using them. So let's dive in and start mastering AVR microcontrollers!",
   "objectives": [
@@ -19,5 +20,7 @@
   ],
   "noOfSessions": "9-12 Sessions in 4 week",
   "id": "avr",
-  "image": ""
+  "image": AvrImage
 }
+
+export default Avr;
