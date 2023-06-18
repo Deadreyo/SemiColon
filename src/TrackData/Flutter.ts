@@ -1,5 +1,6 @@
 import FlutterImage from '../assets/flutter.jpg'
-const flutter = {
+import TrackData from '../types/TrackData'
+const flutter: TrackData = {
   title: 'Flutter',
   description:
     'Flutter is a popular mobile app development framework that allows you to build high-quality, natively compiled apps for iOS, Android, and the web from a single codebase. This workshop is designed to introduce you to Flutter and its key concepts, so that you can start building your own mobile apps.',

@@ -1,6 +1,7 @@
 import ArmImage from '../assets/ArmImage.jfif'
+import TrackData from '../types/TrackData'
 
-const Arm = {
+const Arm: TrackData = {
   title: 'ARM',
   description:
     "ARM architecture is a popular processor architecture used in a variety of devices, as smartphones, laptops, and embedded systems. It's designed to be energy-efficient, fast, and scalable, making it an excellent choice for different applications. The workshop includes arm architecture, RCC clock, interrupt, DMA, and more. By the end, you will have an excellent understanding of the STM32F103 microcontroller and its capabilities.",

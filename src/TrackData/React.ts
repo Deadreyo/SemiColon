@@ -1,5 +1,6 @@
 import ReactImage from '../assets/react.jpg'
-const react = {
+import TrackData from '../types/TrackData'
+const react: TrackData = {
   title: 'React',
   description:
     'In this workshop, you will have the opportunity to dive deep into the world of React and see how it can be used to develop web applications. You will learn how to build interactive and dynamic user interfaces, integrate with APIs, and much more. Some examples of popular web applications built with React include Facebook, Instagram, and Netflix.',

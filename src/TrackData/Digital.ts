@@ -1,5 +1,6 @@
 import DigitalImage from '../assets/digital.jpg'
-const digital = {
+import TrackData from '../types/TrackData'
+const digital: TrackData = {
   title: 'Digital Design',
   description:
     "EDA is the process of diving deeper into how most electronic devices, such as microprocessors, memories, and communication devices, are developed and brought to your hands in various forms such as laptops, smartphones, and more. In fact, it's a long journey that goes through three steps: designing the architecture of the device using HDL, verifying it with SV, and finally, the layout step to extract the product.",

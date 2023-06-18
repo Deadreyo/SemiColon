@@ -15,8 +15,9 @@ import React from './TrackData/React'
 import Nodejs from './TrackData/Nodejs'
 import Digital from './TrackData/Digital'
 import Card from './Components/Cards/Card'
+import TrackData from './types/TrackData'
 
-const tracks = [
+const tracks: TrackData[] = [
   Python,
   FrontEnd,
   fullStack,

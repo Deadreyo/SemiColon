@@ -1,5 +1,6 @@
 import FrontEndImage from '../assets/Web.jpg'
-const frontEnd = {
+import TrackData from '../types/TrackData'
+const frontEnd: TrackData = {
   title: 'Frontend Development',
   description:
     'HTML, CSS, and JavaScript are the three core technologies that power the modern web. This workshop introduces you to their fundamentals, so you can start building your own websites and web apps. Learn to structure web pages with HTML, style them with CSS, and add interactivity with JavaScript.',

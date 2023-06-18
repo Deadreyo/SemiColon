@@ -1,6 +1,7 @@
 import EmbeddedCImage from '../assets/Embedded C.png'
+import TrackData from '../types/TrackData'
 
-const cProg = {
+const cProg: TrackData = {
   title: 'C Programming',
   description:
     'Operating systems, games, and mobile apps are all made with the help of the robust and popular programming language C. You will learn topics including variables, data types, operators, control flow, functions, arrays, pointers, memory allocation, data structure, and more. Join us to build a strong foundation in C programming and take your skills to the next level.',

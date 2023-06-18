@@ -1,5 +1,6 @@
 import DesktopImage from '../assets/CC--.png'
-const desktop = {
+import TrackData from '../types/TrackData'
+const desktop: TrackData = {
   title: 'C++ App. Development',
   description:
     'Learning development using C++ and Qt is very beneficial for aspiring software developers as it provides an opportunity to gain experience with a powerful language and framework used for building complex applications. C++ and Qt introduce many fundamental concepts that help you as a software developer even if you switch later on to different frameworks or programming languages.',

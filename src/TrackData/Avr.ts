@@ -1,5 +1,6 @@
 import AvrImage from '../assets/avr-icon-480x280.jpg'
-const Avr = {
+import TrackData from '../types/TrackData'
+const Avr: TrackData = {
   title: 'AVR',
   description:
     "AVR microcontrollers are widely used in a variety of applications, from simple DIY projects to complex industrial systems. You will learn topics including Embedded Systems, module drivers, DIO, timers, ADC, communication protocols, and more By the end of this course, Join us to build a solid understanding of how to work with AVR microcontrollers and design your embedded systems using them. So let's dive in and start mastering AVR microcontrollers!",
