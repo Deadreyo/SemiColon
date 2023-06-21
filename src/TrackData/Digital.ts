@@ -12,7 +12,7 @@ const digital: TrackData = {
   noOfSessions: '7-8 sessions in 4 week',
   id: 'digital',
   image: DigitalImage,
-  active: false,
+  active: true,
 }
 
 export default digital

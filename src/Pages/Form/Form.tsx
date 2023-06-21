@@ -8,7 +8,7 @@ import Chip from '@mui/material/Chip'
 import SubmitError from '../../Components/SubmitError/SubmitError'
 import FormClosed from '../../Components/FormClosed/FormClosed'
 
-const FORM_CLOSED = false
+const FORM_CLOSED = true
 
 const formData = {
   name: '',

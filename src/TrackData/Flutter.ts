@@ -37,7 +37,7 @@ const flutter: TrackData = {
   noOfSessions: '8 sessions one each week',
   id: 'flutter',
   image: FlutterImage,
-  active: false,
+  active: true,
 }
 
 export default flutter

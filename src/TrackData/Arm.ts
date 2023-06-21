@@ -29,7 +29,7 @@ const Arm: TrackData = {
   noOfSessions: '9-12 Sessions in 4 week',
   id: 'arm',
   image: ArmImage,
-  active: false,
+  active: true,
 }
 
 export default Arm

@@ -24,7 +24,7 @@ const Avr: TrackData = {
   noOfSessions: '9-12 Sessions in 4 week',
   id: 'avr',
   image: AvrImage,
-  active: false,
+  active: true,
 }
 
 export default Avr

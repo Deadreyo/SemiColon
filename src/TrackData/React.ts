@@ -29,7 +29,7 @@ const react: TrackData = {
   noOfSessions: '6-7 sessions in 4-5 weeks',
   id: 'react',
   image: ReactImage,
-  active: false,
+  active: true,
 }
 
 export default react
