@@ -19,57 +19,55 @@ const formData = {
   firstPreference: '',
   firstPrefKnowledge: '',
   firstPrefReason: '',
-  secondPreference: '',
-  secondPrefReason: '',
   pastExperience: '',
 }
 
 // TODO: Extract options from TrackData files with "true" active property
 const allOptions = [
-//   {
-//     name: 'FrontEnd',
-//     value: 'frontend',
-//   },
+  //   {
+  //     name: 'FrontEnd',
+  //     value: 'frontend',
+  //   },
   {
     name: 'C Programming',
     value: 'c-prog',
   },
-//   {
-//     name: 'React',
-//     value: 'react',
-//   },
+  //   {
+  //     name: 'React',
+  //     value: 'react',
+  //   },
   {
     name: 'FullStack',
     value: 'fullstack',
   },
-//   {
-//     name: 'Nodejs',
-//     value: 'nodejs',
-//   },
-//   {
-//     name: 'Python',
-//     value: 'python',
-//   },
-//   {
-//     name: 'Avr',
-//     value: 'avr',
-//   },
-//   {
-//     name: 'Arm',
-//     value: 'arm',
-//   },
-//   {
-//     name: 'Flutter',
-//     value: 'flutter',
-//   },
-//   {
-//     name: 'Digital',
-//     value: 'digital',
-//   },
-//   {
-//     name: 'Desktop',
-//     value: 'desktop',
-//   },
+  //   {
+  //     name: 'Nodejs',
+  //     value: 'nodejs',
+  //   },
+  //   {
+  //     name: 'Python',
+  //     value: 'python',
+  //   },
+  //   {
+  //     name: 'Avr',
+  //     value: 'avr',
+  //   },
+  //   {
+  //     name: 'Arm',
+  //     value: 'arm',
+  //   },
+  //   {
+  //     name: 'Flutter',
+  //     value: 'flutter',
+  //   },
+  //   {
+  //     name: 'Digital',
+  //     value: 'digital',
+  //   },
+  //   {
+  //     name: 'Desktop',
+  //     value: 'desktop',
+  //   },
 ]
 
 function Form() {
@@ -78,8 +76,6 @@ function Form() {
   const [loading, setLoading] = useState(false)
   const [thankMessage, setThankMessage] = useState(false)
   const [submitErrorMessage, setSubmitErrorMessage] = useState(false)
-  const [firstPref, setFirstPref] = useState('')
-  const filterOptions2ndPref = allOptions.filter((op) => op.value !== firstPref)
 
   const handleChange = (
     event:
@@ -93,19 +89,7 @@ function Form() {
       [id]: value,
     })
   }
-  const handleChangeSecondSelect = (
-    event:
-      | React.ChangeEvent<HTMLInputElement>
-      | React.ChangeEvent<HTMLSelectElement>
-      | React.ChangeEvent<HTMLTextAreaElement>
-  ) => {
-    const { id, value } = event.target
-    setData({
-      ...data,
-      [id]: value,
-    })
-    setFirstPref(event.target.value)
-  }
+
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     data.name = data.name.trim()
@@ -129,12 +113,8 @@ function Form() {
       setThankMessage(false)
     } else if (
       data.year === '' ||
-      data.year === '' ||
       data.firstPreference === '' ||
-      data.secondPreference === '' ||
-      data.firstPrefKnowledge === '' ||
-      data.secondPreference === '' ||
-      data.secondPreference === ''
+      data.firstPrefKnowledge === ''
     ) {
       alert('Please fill all the required inputs')
       setErrorMessage('Please fill all the required inputs')
@@ -251,7 +231,12 @@ function Form() {
               </div>
               <div className="drop-down">
                 <div className="select">
-                  <select className="options" id="year" onChange={handleChange} required>
+                  <select
+                    className="options"
+                    id="year"
+                    onChange={handleChange}
+                    required
+                  >
                     <option value="">Year</option>
                     <option value="Freshman">Freshman</option>
                     <option value="Sophomore">Sophomore</option>
@@ -266,7 +251,7 @@ function Form() {
               <br />
               <Divider>
                 <Chip
-                  label="First & Second Preferences"
+                  label="Technical Info"
                   color="warning"
                   style={{ fontSize: '1.1rem', padding: '10px' }}
                   size="medium"
@@ -279,10 +264,10 @@ function Form() {
                   <select
                     className="options"
                     id="firstPreference"
-                    onChange={handleChangeSecondSelect}
+                    onChange={handleChange}
                     required
                   >
-                    <option value="">First Preference</option>
+                    <option value="">Track</option>
                     {allOptions.map((op) => (
                       <option value={op.value}>{op.name}</option>
                     ))}
@@ -299,7 +284,7 @@ function Form() {
                 />
                 <div className="cut cut-short"></div>
                 <label className="placeholder">
-                  Previous experience in first preference
+                  Previous experience in this track
                 </label>
               </div>
               <div className="input-container ic2 text-area">
@@ -311,34 +296,7 @@ function Form() {
                 />
                 <div className="cut cut-long"></div>
                 <label className="placeholder">
-                  Reason of interest in this first preference (Optional)
-                </label>
-              </div>
-              <div className="select">
-                <select
-                  className="options"
-                  id="secondPreference"
-                  onChange={handleChange}
-                  required
-                >
-                  <option value="">Second Preference</option>
-                  {filterOptions2ndPref.map((op) => (
-                    <option key={firstPref + op.value} value={op.value}>
-                      {op.name}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <div className="input-container ic2 text-area">
-                <textarea
-                  id="secondPrefReason"
-                  className="input"
-                  placeholder=" "
-                  onChange={handleChange}
-                />
-                <div className="cut cut-long"></div>
-                <label className="placeholder">
-                  Reason of interest in this second preference (Optional)
+                  Reason of interest in this track (Optional)
                 </label>
               </div>
               <hr className="solid"></hr>
