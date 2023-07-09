@@ -23,7 +23,7 @@ const fullStack: TrackData = {
     '9. PHP Functions',
   ],
   noOfSessions: '12 sessions in 4 weeks',
-  id: 'fullStack',
+  id: 'fullstack',
   image: FullStackImage,
   active: true,
 }

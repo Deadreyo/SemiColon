@@ -26,7 +26,7 @@ const cProg: TrackData = {
     '11. Data Structure',
   ],
   noOfSessions: '9-12 Sessions in 4 week',
-  id: 'cProg',
+  id: 'c-prog',
   image: EmbeddedCImage,
   active: true,
 }

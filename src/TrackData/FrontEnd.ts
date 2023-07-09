@@ -19,7 +19,7 @@ const frontEnd: TrackData = {
     '6. Interacting with the DOM (Document Object Model) API',
   ],
   noOfSessions: '6-8 sessions in 4-5 weeks',
-  id: 'frontEnd',
+  id: 'frontend',
   image: FrontEndImage,
   active: true,
 }

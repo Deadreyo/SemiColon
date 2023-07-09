@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import Header from '../../Components/Header/Header'
 import './Form.css'
 import Loading from '../../Components/Loading/Loading'
@@ -7,8 +7,9 @@ import Divider from '@mui/material/Divider'
 import Chip from '@mui/material/Chip'
 import SubmitError from '../../Components/SubmitError/SubmitError'
 import FormClosed from '../../Components/FormClosed/FormClosed'
+import TrackData from '../../types/TrackData'
 
-const FORM_CLOSED = true
+const FORM_CLOSED = false
 
 const formData = {
   name: '',
@@ -22,60 +23,27 @@ const formData = {
   pastExperience: '',
 }
 
-// TODO: Extract options from TrackData files with "true" active property
-const allOptions = [
-  //   {
-  //     name: 'FrontEnd',
-  //     value: 'frontend',
-  //   },
-  {
-    name: 'C Programming',
-    value: 'c-prog',
-  },
-  //   {
-  //     name: 'React',
-  //     value: 'react',
-  //   },
-  {
-    name: 'FullStack',
-    value: 'fullstack',
-  },
-  //   {
-  //     name: 'Nodejs',
-  //     value: 'nodejs',
-  //   },
-  //   {
-  //     name: 'Python',
-  //     value: 'python',
-  //   },
-  //   {
-  //     name: 'Avr',
-  //     value: 'avr',
-  //   },
-  //   {
-  //     name: 'Arm',
-  //     value: 'arm',
-  //   },
-  //   {
-  //     name: 'Flutter',
-  //     value: 'flutter',
-  //   },
-  //   {
-  //     name: 'Digital',
-  //     value: 'digital',
-  //   },
-  //   {
-  //     name: 'Desktop',
-  //     value: 'desktop',
-  //   },
-]
+interface FormProps {
+  tracks: TrackData[]
+}
 
-function Form() {
+function Form({ tracks }: FormProps) {
   const [data, setData] = useState(formData)
   const [errorMessage, setErrorMessage] = useState('')
   const [loading, setLoading] = useState(false)
   const [thankMessage, setThankMessage] = useState(false)
   const [submitErrorMessage, setSubmitErrorMessage] = useState(false)
+
+  const trackSelectOptions = useMemo(
+    () =>
+      tracks
+        .filter((track) => track.active)
+        .map((track) => ({
+          name: track.title,
+          value: track.id,
+        })),
+    [tracks]
+  )
 
   const handleChange = (
     event:
@@ -268,7 +236,7 @@ function Form() {
                     required
                   >
                     <option value="">Track</option>
-                    {allOptions.map((op) => (
+                    {trackSelectOptions.map((op) => (
                       <option value={op.value}>{op.name}</option>
                     ))}
                   </select>
