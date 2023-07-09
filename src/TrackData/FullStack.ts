@@ -25,7 +25,7 @@ const fullStack: TrackData = {
   noOfSessions: '12 sessions in 4 weeks',
   id: 'fullstack',
   image: FullStackImage,
-  active: true,
+  active: false,
 }
 
 export default fullStack
