@@ -13,10 +13,9 @@ const react: TrackData = {
     '6. Make your own web application as a final project.',
   ],
   requirements: [
-    '1. A laptop with a recent operating system (Windows, macOS, or Linux) and a reliable internet connection',
-    '2. A basic understanding of HTML, CSS, and JavaScript',
-    '3. Familiarity with modern JavaScript features, such as arrow functions and destructuring',
-    '4. Experience with a code editor such as VS Code or Sublime Text',
+    '1. A basic understanding of HTML, CSS, and JavaScript',
+    '2. Familiarity with modern JavaScript features, such as arrow functions and destructuring',
+    '3. Experience with a code editor such as VS Code or Sublime Text',
   ],
   content: [
     '1. Introduction to React',
