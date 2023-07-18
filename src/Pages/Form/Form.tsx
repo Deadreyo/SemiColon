@@ -9,7 +9,7 @@ import SubmitError from '../../Components/SubmitError/SubmitError'
 import FormClosed from '../../Components/FormClosed/FormClosed'
 import TrackData from '../../types/TrackData'
 
-const FORM_CLOSED = false
+const FORM_CLOSED = true
 
 const formData = {
   name: '',
