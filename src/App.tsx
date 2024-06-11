@@ -50,7 +50,9 @@ const router = createBrowserRouter([
       </SmoothScroll>
     ),
   },
-])
+], {
+  basename: '/SemiColon-registration-frontend'
+})
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
